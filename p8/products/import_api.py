@@ -8,6 +8,8 @@ def get_json():
     url = 'https://fr.openfoodfacts.org/cgi/search.pl'
     params = {
                "action": "process",
+               'tag_contains_0':"contains",
+               'lang': "fr",
                "json": 1,
                "page_size": 1,
              }
@@ -16,5 +18,17 @@ def get_json():
     products = []
     if response.status_code == 200:
         products = response.json()['products']
+        popo = products[1]["categories"]
+        papa=popo.split(",")
+        i = 0
+        while i < len(papa)-1 :
+            print(papa[i])
+            i = i+1
 
+
+
+
+
+    
     return products
+get_json()
