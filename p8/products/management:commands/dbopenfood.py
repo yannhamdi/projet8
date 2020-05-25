@@ -20,7 +20,6 @@ class Command(BaseCommand):
 
     def saving_cat(self):
         """methods that fills the cat model"""
-        i= 0
         popo = self.prod
         i = 0
         while i <= ((len(popo))-1):
@@ -30,4 +29,8 @@ class Command(BaseCommand):
                 c = Category.objects.get_or_create(cat=papa[j])
                 i = i+1
                 j = j+1
+        
+
+    def create_product(self):
+        """methods that fills up our model product"""
         
