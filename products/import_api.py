@@ -11,21 +11,14 @@ def get_json():
                'tag_contains_0':"contains",
                'lang': "fr",
                "json": 1,
-               "page_size": 10,
+               "page_size": 7000,
              }
     response = requests.get(url, params=params)
     print(response)
     products = []
     if response.status_code == 200:
         products = response.json()['products']
-        print(products[0]["code"])
-        print(products[0]["product_name"])
-        print(products[0]["nutrition_grade_fr"])
-        print(products[0]["url"])
-
-
     return products
 
 
 
-get_json()

@@ -15,9 +15,6 @@ class Command(BaseCommand):
         self.prod = get_json()
         self.saving_cat()
 
-
-
-
     def saving_cat(self):
         """methods that fills the cat model"""
         popo = self.prod
@@ -33,4 +30,13 @@ class Command(BaseCommand):
 
     def create_product(self):
         """methods that fills up our model product"""
+        db_pro = self.prod
+        i = 0
+        while i <= (len(products)-1):
+            Products.objects.get_or_create(id_code=products[i]["code"],
+                                    food_name=products[i]["product_name"],
+                           nutrition_grade=products[i]["nutrition_grade_fr"],
+                                                 food_link=products[i]["url"],
+                                          image_url=products[i]["image_url"])
+            i = i+1
         
