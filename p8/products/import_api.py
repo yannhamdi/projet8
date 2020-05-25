@@ -18,8 +18,14 @@ def get_json():
     products = []
     if response.status_code == 200:
         products = response.json()['products']
-        
-
+        print(products[0]["code"])
+        print(products[0]["product_name"])
+        print(products[0]["nutrition_grade_fr"])
+        print(products[0]["url"])
 
 
     return products
+
+
+
+get_json()

@@ -27,7 +27,7 @@ class Command(BaseCommand):
             papa = (popo[i]["categories"]).split(',')
             j = 0
             while j <= ((len(papa))-1):
-                c = CAtegory.objects.get_or_create(cat=papa[j])
+                c = Category.objects.get_or_create(cat=papa[j])
                 i = i+1
                 j = j+1
         
