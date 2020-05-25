@@ -24,6 +24,6 @@ class Command(BaseCommand):
         popo = self.prod[i]["categories"]
         papa=popo.split(",")
         while i < len(papa)-1 :
-            c = Category(cat = papa[i])
+            c = Category.objects.get_or_create(cat = papa[i])
             c.save()
             i = i+1
