@@ -125,3 +125,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+FOOD_CATEGORIES =[
+  "fromages",
+  "Charcuteries",
+  "Snacks sucrés",
+  "Soupes",
+  "Jus de fruits",
+  "Plats préparés"
+  ]
