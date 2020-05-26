@@ -12,31 +12,28 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         """ funcion that will call all the methods to fill our database"""
-        self.prod = get_json()
-        self.saving_cat()
-        self.create_product()
-    def saving_cat(self):
-        """methods that fills the cat model"""
-        popo = self.prod
-        i = 0
-        while i <= ((len(popo))-1):
-            papa = (popo[i]["categories"]).split(',')
-            j = 0
-            while j <= ((len(papa))-1):
-                c = Category.objects.get_or_create(cat=papa[j])
-                i = i+1
-                j = j+1
-        
+        self.delete_all()
+        for category in settings.FOOD_CATEGORIES:
+            self.saving_cat(category)
 
-    def create_product(self):
-        """methods that fills up our model product"""
-        db_pro = self.prod
-        i = 0
-        while i <= (len(db_pro)-1):
-            Products.objects.get_or_create(id_code=db_pro[i]["code"],
-                                    food_name=db_pro[i]["product_name"],
-                           nutrition_grade=db_pro[i]["nutrition_grade_fr"],
-                                                 food_link=db_pro[i]["url"],
-                                          image_url=db_pro[i]["image_url"])
-            i = i+1
+    def saving_cat(self, category):
+        """methods that fills the cat model"""
+        self.category = category
+        Category.objects.get_or_create(cat=category)
+        self.db_product = get_json(category)
         
+        i = 0
+        while i <= ((len(self.db_product))-1):
+            try:
+                Products.objects.get_or_create(id_code=self.db_product[i]["code"],
+                        food_name=self.db_product[i]["product_name"],
+                        nutrition_grade=self.db_product[i]["nutrition_grade_fr"],
+                                    food_link=self.db_product[i]["url"],
+                             image_url=self.db_product[i]["image_url"])
+                i = i + 1
+            except:
+                i = i + 1
+        
+    def delete_all(self):
+        Products.objects.all().delete()
+        Category.objects.all().delete()
