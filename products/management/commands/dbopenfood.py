@@ -39,12 +39,12 @@ class Command(BaseCommand):
                         p.replace(" ", "")
                         if p in settings.FOOD_CATEGORIES:
                             print(p)
-                            Products.objects.get_or_create(category = p)
+                            Products.objects.get_or_create(category=p)
                             j = j + 1
                         j = j + 1
                     if p in settings.FOOD_CATEGORIES:
                         print(p)
-                        Products.objects.get_or_create(category = p)
+                        Products.objects.get_or_create(category=p)
                         j= j + 1
                     j = j + 1
                 i = i + 1
