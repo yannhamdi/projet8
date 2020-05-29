@@ -130,9 +130,9 @@ STATICFILES_DIRS = (
 
 FOOD_CATEGORIES =[
   "fromages",
-  "Charcuteries",
-  "Snacks sucrés",
-  "Soupes",
-  "Jus de fruits",
-  "Plats préparés"
+  "charcuteries",
+  "snacks sucrés",
+  "soupes",
+  "jus de fruits",
+  "plats préparés"
   ]

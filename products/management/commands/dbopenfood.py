@@ -30,6 +30,23 @@ class Command(BaseCommand):
                         nutrition_grade=self.db_product[i]["nutrition_grade_fr"],
                                     food_link=self.db_product[i]["url"],
                              image_url=self.db_product[i]["image_url"])
+                papa = (self.db_product[i]["categories"]).split(",")
+                j = 0
+                while j <= ((len(papa))-1):
+                    pipi = ((papa[j]).lower())
+                    p = pipi.strip()
+                    if p[0] == " ":
+                        p.replace(" ", "")
+                        if p in settings.FOOD_CATEGORIES:
+                            print(p)
+                            Products.objects.get_or_create(category = p)
+                            j = j + 1
+                        j = j + 1
+                    if p in settings.FOOD_CATEGORIES:
+                        print(p)
+                        Products.objects.get_or_create(category = p)
+                        j= j + 1
+                    j = j + 1
                 i = i + 1
             except:
                 i = i + 1

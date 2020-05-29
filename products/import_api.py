@@ -13,7 +13,7 @@ def get_json(category):
                "tag_contains_0": "contains",
                "tag_0": category,
                "json": 1,
-               "page_size": 1000,
+               "page_size": 1,
                
              }
     response = requests.get(url, params=params)
@@ -21,3 +21,4 @@ def get_json(category):
     if response.status_code == 200:
         products = response.json()['products']
         return products
+        
