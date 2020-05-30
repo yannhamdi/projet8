@@ -14,43 +14,47 @@ class Command(BaseCommand):
         """ funcion that will call all the methods to fill our database"""
         self.delete_all()
         for category in settings.FOOD_CATEGORIES:
+            self.saving_category(category)
+        for category in settings.FOOD_CATEGORIES:
             self.saving_cat(category)
+    def checking_blank(self, element):
+        """ method that check blank lines"""
+        keys = ["code", "product_name", "nutrition_grade_fr", "url", "image_url", "categories"]
+        for key in keys:
+            if element[key]:
+                return True
+            return False
+
+    def saving_category(self, category):
+        Category.objects.get_or_create(cat=category)   
 
     def saving_cat(self, category):
         """methods that fills the cat model"""
         self.category = category
-        Category.objects.get_or_create(cat=category)
-        self.db_product = get_json(category)
         
-        i = 0
-        while i <= ((len(self.db_product))-1):
-            try:
-                Products.objects.get_or_create(id_code=self.db_product[i]["code"],
-                        food_name=self.db_product[i]["product_name"],
-                        nutrition_grade=self.db_product[i]["nutrition_grade_fr"],
-                                    food_link=self.db_product[i]["url"],
-                             image_url=self.db_product[i]["image_url"])
-                papa = (self.db_product[i]["categories"]).split(",")
-                j = 0
-                while j <= ((len(papa))-1):
-                    pipi = ((papa[j]).lower())
-                    p = pipi.strip()
+        self.db_product = get_json(category)
+        for element in self.db_product:
+            if self.checking_blank(element) is True:
+                Products.objects.get_or_create(id_code=element["code"],
+                        food_name=element["product_name"],
+                        nutrition_grade=element["nutrition_grade_fr"],
+                                    food_link=element["url"],
+                             image_url=element["image_url"])
+                papa = (element["categories"]).split(",")
+                for item in papa:
+                    p = (item.lower()).strip()
                     if p[0] == " ":
                         p.replace(" ", "")
                         if p in settings.FOOD_CATEGORIES:
-                            print(p)
-                            Products.objects.get_or_create(category=p)
-                            j = j + 1
-                        j = j + 1
+                            r = Products.objects.get(id_code=element["code"])
+                            s = Category.objects.get(cat=p)
+                            r.category.add(s)
+                            r.save()
                     if p in settings.FOOD_CATEGORIES:
-                        print(p)
-                        Products.objects.get_or_create(category=p)
-                        j= j + 1
-                    j = j + 1
-                i = i + 1
-            except:
-                i = i + 1
-        
+                        r = Products.objects.get(id_code=element["code"])
+                        s = Category.objects.get(cat=p)
+                        r.category.add(s)
+                        r.save()
     def delete_all(self):
         Products.objects.all().delete()
         Category.objects.all().delete()
