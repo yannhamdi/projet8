@@ -21,9 +21,9 @@ class Command(BaseCommand):
         """ method that check blank lines"""
         keys = ["code", "product_name", "nutrition_grade_fr", "url", "image_url", "categories"]
         for key in keys:
-            if element[key]:
-                return True
-            return False
+            if key not in element or not element[key]:
+                return False
+        return True
 
     def saving_category(self, category):
         Category.objects.get_or_create(cat=category)   
@@ -34,8 +34,8 @@ class Command(BaseCommand):
         
         self.db_product = get_json(category)
         for element in self.db_product:
-            if self.checking_blank(element) is True:
-                Products.objects.get_or_create(id_code=element["code"],
+            if self.checking_blank(element):
+                product, created =Products.objects.get_or_create(id_code=element["code"],
                         food_name=element["product_name"],
                         nutrition_grade=element["nutrition_grade_fr"],
                                     food_link=element["url"],
@@ -46,15 +46,13 @@ class Command(BaseCommand):
                     if p[0] == " ":
                         p.replace(" ", "")
                         if p in settings.FOOD_CATEGORIES:
-                            r = Products.objects.get(id_code=element["code"])
                             s = Category.objects.get(cat=p)
-                            r.category.add(s)
-                            r.save()
+                            product.category.add(s)
+                            product.save()
                     if p in settings.FOOD_CATEGORIES:
-                        r = Products.objects.get(id_code=element["code"])
                         s = Category.objects.get(cat=p)
-                        r.category.add(s)
-                        r.save()
+                        product.category.add(s)
+                        product.save()
     def delete_all(self):
         Products.objects.all().delete()
         Category.objects.all().delete()
