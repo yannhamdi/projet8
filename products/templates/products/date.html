@@ -4,6 +4,7 @@
 {% for article in derniers_produits %}
     <div class="article">
     	<h3> {{ article.food_name }} </h3>
+    	<p><a href="{% url 'lire' article.id_code %}">Lire la suite</a></p>
     	<h4> {{ article.nutrition_grade }} </h4>
     	<p>
     	<img src= {{ article.image_url }}>
