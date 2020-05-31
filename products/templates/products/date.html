@@ -1,2 +1,14 @@
-<h1> Bienvenue sur mon blog</h1>
-<p> La date actuelle est : {{date}}</p>
+<h1> Liste des 5 derniers produits</h1>
+
+
+{% for article in derniers_produits %}
+    <div class="article">
+    	<h3> {{ article.food_name }} </h3>
+    	<h4> {{ article.nutrition_grade }} </h4>
+    	<p>
+    	<img src= {{ article.image_url }}>
+        </p>
+    </div>
+{% empty %}
+    <p>Aucun article.</p>
+{% endfor %}

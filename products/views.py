@@ -1,12 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from datetime import datetime
 
+from products.models import Products
 
-def home(request):
-    """ Exemple de page non valide au niveau HTML pour que l'exemple soit concis """
-    return HttpResponse("""
-        <h1>Bienvenue sur mon blog !</h1>
-        <p>Les crêpes bretonnes ça tue des mouettes en plein vol !</p>
-    """)
+def accueil(request):
+    """ Afficher tous les articles de notre blog """
+    articles = Products.objects.all()[:5] # Nous sélectionnons tous nos articles
+    return render(request, 'products/date.html', {'derniers_produits': articles})
 
