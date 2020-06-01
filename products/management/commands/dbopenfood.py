@@ -43,12 +43,6 @@ class Command(BaseCommand):
                 papa = (element["categories"]).split(",")
                 for item in papa:
                     p = (item.lower()).strip()
-                    if p[0] == " ":
-                        p.replace(" ", "")
-                        if p in settings.FOOD_CATEGORIES:
-                            s = Category.objects.get(cat=p)
-                            product.category.add(s)
-                            product.save()
                     if p in settings.FOOD_CATEGORIES:
                         s = Category.objects.get(cat=p)
                         product.category.add(s)
