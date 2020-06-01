@@ -134,5 +134,8 @@ FOOD_CATEGORIES =[
   "snacks sucrés",
   "soupes",
   "jus de fruits",
-  "plats préparés"
+  "plats préparés",
+  "confitures",
+  "boissons",
+  "sauces"
   ]
