@@ -20,7 +20,9 @@ def search(request):
     if form.is_valid():
         prod = form.cleaned_data['search']
         produ_id = Products.objects.filter(food_name__icontains=prod)
-        return redirect(reverse('lire', args=[produ_id[0].id_code]))
+        category_product = produ_id[0].category
+        better_product = Products.objects.filter(category=category_product).filter(nutrition_grade__lt=produ_id[0].nutrition_grade)
+        return redirect(reverse('lire', args=[better_product[0].id_code]))
     return render(request, 'products/search.html', locals())
 
     
