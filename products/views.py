@@ -1,13 +1,17 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
+from django.core.paginator import Paginator
 from django.urls import reverse
 from products.models import Products
 from .forms import ProductSearch
 
 def accueil(request):
     """ Afficher tous les articles de notre blog """
-    articles = Products.objects.all()[:5] # Nous sélectionnons tous nos articles
-    return render(request, 'products/date.html', {'derniers_produits': articles})
+    articles = Products.objects.all() # we select all products
+    paginator = Paginator(articles, 10)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'products/date.html', {'page_obj': page_obj})
 
 
 def lire(request, id):
