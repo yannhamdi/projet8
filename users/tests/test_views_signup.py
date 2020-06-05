@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.urls import resolve
 from django.test import TestCase
 from ..models import User
@@ -11,13 +11,14 @@ class SignUpTests(TestCase):
         url = reverse('signup')
         data = {
             'username': 'john',
-            'name': 'hamdi',
-            'first_name': 'yann'
+            'name': 'yann',
+            'first_name': 'hamdi',
+            'email': 'john@doe.com',
             'password1': 'abcdef123456',
             'password2': 'abcdef123456'
         }
         self.response = self.client.post(url, data)
-     def test_user_creation(self):
+    def test_user_creation(self):
         self.assertTrue(User.objects.exists())
 
     def test_user_authentication(self):
@@ -66,8 +67,8 @@ class SuccessfulSignUpTests(TestCase):
         data = {
             'username': 'john',
             'email': 'john@doe.com',
-            'name': 'hamdi'
-            'first_name': 'yann'
+            'name': 'hamdi',
+            'first_name': 'yann',
             'password1': 'abcdef123456',
             'password2': 'abcdef123456'
         }
