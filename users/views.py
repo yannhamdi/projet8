@@ -7,6 +7,7 @@ from django.conf import settings
 from .forms import SignUpForm, SignInForm
 
 def signup(request):
+	"""views that allows the user to signup"""
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
@@ -34,3 +35,10 @@ def signin(request):
     else:
         form = SignInForm()
     return render(request, 'registration/signin.html', {'form': form})
+
+
+
+def signout(request):
+    """views that logs out"""
+    auth.logout(request)
+    return redirect('search')
