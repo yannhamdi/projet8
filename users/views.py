@@ -7,8 +7,8 @@ def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST or None)
         if form.is_valid():
-            user = form.save()
-            auth_login(request, user)
+            auth.login(request, user)
+            return redirect('search')
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
