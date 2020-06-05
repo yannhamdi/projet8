@@ -33,4 +33,5 @@ def search(request):
         return redirect(reverse('lire', args=[better_product[0].id_code]))
     return render(request, 'products/search.html', locals())
 
-    
+
+

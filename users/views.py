@@ -5,9 +5,10 @@ from django.shortcuts import render, redirect
 from django.conf import settings
 
 from .forms import SignUpForm, SignInForm
+from users.models import User
 
 def signup(request):
-	"""views that allows the user to signup"""
+    """views that allows the user to signup"""
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
@@ -36,9 +37,16 @@ def signin(request):
         form = SignInForm()
     return render(request, 'registration/signin.html', {'form': form})
 
-
-
 def signout(request):
     """views that logs out"""
     auth.logout(request)
     return redirect('search')
+
+
+def account(request):
+    """ views that display user's details"""
+    user_details = User(request)
+    return render(request, 'registration/account.html', {'user_details': user_details})
+
+
+
