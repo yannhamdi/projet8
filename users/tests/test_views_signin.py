@@ -8,3 +8,11 @@ class SignInViewsTest(TestCase):
     def test_signin(self):
         response = self.client.post(reverse('signin'))
         self.assertEqual(response.status_code, 200)
+
+    def test_signout(self):
+        response = self.client.get(reverse('signout'))
+        self.assertEqual(response.status_code, 302)
+
+    def test_account(self):
+        response = self.client.post(reverse('account'))
+        self.assertEqual(response.status_code, 200)
