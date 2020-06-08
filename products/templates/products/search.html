@@ -7,6 +7,6 @@
 {% if user.is_authenticated  %}
 <h3> M. {{ user.first_name }} Veuillez choisir un élément à substituer </h3>
 <a href="{% url 'signout' %}"> Signout </a>
-
+&nbsp;<a href="{% url 'display_account' %}"> Voir vos recherches </a>
 {% else %}
 <a href="{% url 'signin' %}"> Signin </a> {% endif %}

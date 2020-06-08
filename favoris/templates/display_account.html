@@ -1,0 +1,38 @@
+<h1> vos recherches</h1>
+
+
+{% for favorite in page_obj %}
+    <div class="article">
+    	<h3> Aliment recherché {{ favorite.product_searched.food_name }} </h3>
+    	<p><a href="{% url 'lire' favorite.product_searched.id_code %}">Lire la suite</a></p>
+    	<h4> {{ favorite.product_searched.nutrition_grade }} </h4>
+    	<p>
+    	<img src= {{ favorite.product_searched.image_url }}>
+        </p>
+        <h3> Aliment trouvé {{ favorite.product_substitute.food_name }} </h3>
+        <p><a href="{% url 'lire' favorite.product_substitute.id_code %}">Lire la suite</a></p>
+        <h4> {{ favorite.product_substitute.nutrition_grade }} </h4>
+        <p>
+        <img src= {{ favorite.product_substitute.image_url }}>
+        </p>
+    </div>
+{% empty %}
+    <p>Aucun article.</p>
+{% endfor %}
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>

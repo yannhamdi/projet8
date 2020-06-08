@@ -1,10 +1,11 @@
 <h1> Votre recherche</h1>
 
-<h1> Nom du produit recherché {{ product_searched.food_name}} </h1>
+<h3> Nom du produit recherché {{ product_searched.food_name}} </h3>
 <img src= {{ product_searched.image_url }}>
 <h3> Nutrition grade {{ product_searched.nutrition_grade}} </h3>
-<h2><a href="">{{ product_searched.food_link }} </a></h2>
-<h1> Nom du produit proposé {{ product_sub.food_name}} </h1>
+<h3><a href="">{{ product_searched.food_link }} </a></h3>
+<h3> Nom du produit proposé {{ product_sub.food_name}} </h3>
 <img src= {{ product_sub.image_url }}>
 <h3> Nutrition grade {{ product_sub.nutrition_grade}} </h3>
-<h2><a href="">{{ product_sub.food_link }} </a></h2>
+<h3><a href="">{{ product_sub.food_link }} </a></h3>
+<h3><a href="{% url 'saving_search' product_searched.id_code product_sub.id_code %}"> Enregistrez votre recherche </a></h3>
