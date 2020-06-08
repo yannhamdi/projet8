@@ -32,7 +32,6 @@ def signin(request):
             if user:
                 auth.login(request, user)
                 return redirect('/products/search/?next=%s' % request.path)
-            print("erreur")
     else:
         form = SignInForm()
     return render(request, 'registration/signin.html', {'form': form})
