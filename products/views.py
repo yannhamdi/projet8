@@ -13,6 +13,12 @@ def accueil(request):
     page_obj = paginator.get_page(page_number)
     return render(request, 'products/date.html', {'page_obj': page_obj})
 
+def display(request, id_searched, id_substitue):
+    """afficher l'aliment recherché ainsi que l'aliment proposé"""
+    product_searched = Products.objects.get(id_code=id_searched)
+    product_sub = Products.objects.get(id_code=id_substitue)
+    return render(request, 'products/display.html', {'product_searched': product_searched, 'product_sub': product_sub})
+
 
 def lire(request, id):
     article = get_object_or_404(Products.objects.filter(id_code=id))
@@ -30,7 +36,7 @@ def search(request):
             better_product = Products.objects.filter(category=cat).filter(nutrition_grade__lt=produ_id[0].nutrition_grade)
         cat = category_product[0]
         better_product = Products.objects.filter(category=cat).filter(nutrition_grade__lt=produ_id[0].nutrition_grade)
-        return redirect(reverse('lire', args=[better_product[0].id_code]))
+        return redirect(reverse('display', args=[int(produ_id[0].id_code), int(better_product[0].id_code)]))
     return render(request, 'products/search.html', locals())
 
 
