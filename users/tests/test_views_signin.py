@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 from users.models import User 
-from users.views import signin
+from users.views import signin, signout, account
 
 class SignInViewsTest(TestCase):
     def test_signin(self):
