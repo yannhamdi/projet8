@@ -11,5 +11,4 @@ class Favorite(models.Model):
     product_searched = models.ForeignKey("products.Products", on_delete=models.CASCADE, related_name="user_search")
     product_substitute = models.ForeignKey("products.Products", on_delete=models.CASCADE, related_name="product_substitute")
 
-    def __str__(self):
-        return self.product_substitute.food_name
+  

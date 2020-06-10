@@ -6,13 +6,6 @@ from random import randint
 from products.models import Products
 from .forms import ProductSearch
 
-def accueil(request):
-    """ Afficher tous les articles de notre blog """
-    articles = Products.objects.all() # we select all products
-    paginator = Paginator(articles, 10)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-    return render(request, 'products/date.html', {'page_obj': page_obj})
 
 def display(request, id_searched, id_substitue):
     """afficher l'aliment recherché ainsi que l'aliment proposé"""
