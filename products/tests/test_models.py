@@ -18,3 +18,5 @@ class TestProductsModel(TestCase):
         cate = product.category.all()
         cate2= str(cate[0])
         self.assertEqual(cate2, "pizzas")
+        self.assertEqual(product.food_name, Products.__str__(product))
+        self.assertEqual(category.cat, Category.__str__(category))

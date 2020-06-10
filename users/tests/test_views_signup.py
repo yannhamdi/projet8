@@ -39,3 +39,8 @@ class SuccessfulSignUpTests(TestCase):
         user = response.context.get('user')
         self.assertTrue(user.is_authenticated)
 
+    
+    
+    def test_signup(self):
+        response = self.client.post(reverse('signup'))
+        self.assertEqual(response.status_code, 200)
