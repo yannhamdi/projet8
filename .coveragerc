@@ -1,2 +1,8 @@
 [run]
-source = .
+
+omit =
+    p8/*
+    */tests/*
+    */__init__.py
+    manage.py
+    

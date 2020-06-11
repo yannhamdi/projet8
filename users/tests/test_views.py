@@ -54,6 +54,6 @@ class SuccessfulSignUpTests(TestCase):
         self.assertEqual(response.status_code, 302)
 
     def test_account(self):
-        response = self.client.post(reverse('account'))
+        response = self.client.get(reverse('account'))
         self.assertEqual(response.status_code, 200)
     
