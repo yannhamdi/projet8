@@ -26,7 +26,6 @@ def signin(request):
     """view that connect the user"""
     if request.method == 'POST':
         form = SignInForm(request.POST)
-        error = False
         if form.is_valid():
             username = form.cleaned_data["username"]
             password = form.cleaned_data["password"]
@@ -34,8 +33,7 @@ def signin(request):
             if user:
                 auth.login(request, user)
                 return redirect('/products/search/?next=%s' % request.path)
-            else:
-                error = True
+            
     else:
         form = SignInForm()
     return render(request, 'registration/signin.html', {"form": form})
