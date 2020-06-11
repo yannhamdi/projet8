@@ -38,7 +38,7 @@ def signin(request):
                 error = True
     else:
         form = SignInForm()
-    return render(request, 'registration/signin.html', {'form': form})
+    return render(request, 'registration/signin.html', {"form": form})
 
 def signout(request):
     """views that logs out"""
