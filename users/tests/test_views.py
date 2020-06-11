@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.urls import resolve
 from django.test import TestCase
 from ..models import User
-from ..views import signup
+from ..views import signup, signin, signout, account
 from ..forms import SignUpForm
 
 
@@ -44,3 +44,16 @@ class SuccessfulSignUpTests(TestCase):
     def test_signup(self):
         response = self.client.post(reverse('signup'))
         self.assertEqual(response.status_code, 200)
+
+    def test_signin(self):
+        response = self.client.post(reverse('signin'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_signout(self):
+        response = self.client.get(reverse('signout'))
+        self.assertEqual(response.status_code, 302)
+
+    def test_account(self):
+        response = self.client.post(reverse('account'))
+        self.assertEqual(response.status_code, 200)
+    
