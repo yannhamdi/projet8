@@ -1,10 +1,13 @@
 from django.contrib.auth.models import User
+from django.contrib.auth import login as auth_login
+from django.contrib.auth import authenticate
+from django.contrib import auth
 from django.urls import reverse
 from django.urls import resolve
 from django.test import TestCase
 from ..models import User
 from ..views import signup, signin, signout, account
-from ..forms import SignUpForm
+from ..forms import SignUpForm, SignInForm
 
 
 class SuccessfulSignUpTests(TestCase):
@@ -14,6 +17,7 @@ class SuccessfulSignUpTests(TestCase):
             'username': 'john',
             'last_name': 'hamdi',
             'first_name': 'yann',
+            'email': 'ham@homtmail.com',
             'password1': 'abcdef123456',
             'password2': 'abcdef123456'
         }
@@ -42,12 +46,23 @@ class SuccessfulSignUpTests(TestCase):
     
     
     def test_signup(self):
-        response = self.client.post(reverse('signup'))
+        response = self.client.get(reverse('signup'))
         self.assertEqual(response.status_code, 200)
 
     def test_signin(self):
-        response = self.client.post(reverse('signin'))
+        response = self.client.get(reverse('signin'))
         self.assertEqual(response.status_code, 200)
+
+    def test_signin_post(self):
+        url = reverse('signin')
+        data = {
+             'username': 'john',
+             'password': 'abcdef123456'
+        }
+        self.response_2 = self.client.post(url, data)
+        self.assertEqual(self.response_2.status_code, 200)
+    
+
 
     def test_signout(self):
         response = self.client.get(reverse('signout'))
