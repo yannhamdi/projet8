@@ -23,8 +23,8 @@ def saving_search(request,id_searched, id_substitue):
 @login_required
 def display_account(request):
     """views that display searched details"""
-    favoris = Favorite.objects.all() # we select all products
-    paginator = Paginator(favoris, 5)
+    favoris = Favorite.objects.all().order_by('product_searched') # we select all products
+    paginator = Paginator(favoris, 3)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'display_account.html', {'page_obj': page_obj})
