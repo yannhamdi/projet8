@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate
 from django.contrib import auth
 from django.urls import reverse
 from django.urls import resolve
-from django.test import TestCase
+from django.test import TestCase, Client, RequestFactory
 from ..models import User
 from ..views import signup, signin, signout, account
 from ..forms import SignUpForm, SignInForm
@@ -23,7 +23,7 @@ class SuccessfulSignUpTests(TestCase):
         }
         self.response = self.client.post(url, data)
         self.home_url = reverse('search')
-
+        
     def test_redirection(self):
         '''
         A valid form submission should redirect the user to the home page
@@ -60,8 +60,26 @@ class SuccessfulSignUpTests(TestCase):
              'password': 'abcdef123456'
         }
         self.response_2 = self.client.post(url, data)
-        self.assertEqual(self.response_2.status_code, 200)
-    
+        self.assertEqual(self.response_2.status_code, 302)
+
+    def test_signin_form_valid(self):
+        url = reverse('signin')
+        self.client.get(reverse('signout'))
+        user, created = User.objects.get_or_create(username='toto',
+            last_name='hamdi',
+            first_name='yann',
+            email='ham@homtmail.com',
+            password='abcdef123456')
+        
+        data = {'username': 'toto', 'password': 'abcdef123456'}
+        user.set_password('123456789')
+        user.save()
+        user = auth.authenticate(username='toto', password= '123456789')
+        login = self.client.login(username='toto', password= '123456789')
+        form = SignInForm(data={'username': 'toto', 'password':'123456789'})
+        self.assertTrue(login)
+        self.assertTrue(form.is_valid())
+
 
 
     def test_signout(self):
