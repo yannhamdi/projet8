@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
-
+from django.core.paginator import Paginator
 from favoris.models import Favorite
 from products.models import Category, Products
 from users.models import User
@@ -46,30 +46,20 @@ class FavoriteView(TestCase):
 
     def test_display_account(self):
         # Create 13 search for pagination
-
         self.client.force_login(self.user_1)
         response = self.client.get(reverse('display_account'))
-        Favorite.objects.get_or_create(user_link=response.context.get('user'),product_searched=Products.objects.get(id_code=20930395), product_substitute=Products.objects.get(id_code=20930393))
-        Favorite.objects.get_or_create(user_link=response.context.get('user'),product_searched=Products.objects.get(id_code=20930300), product_substitute=Products.objects.get(id_code=20930392))
-        Favorite.objects.get_or_create(user_link=response.context.get('user'),product_searched=Products.objects.get(id_code=20930391), product_substitute=Products.objects.get(id_code=20930398))
-        Favorite.objects.get_or_create(user_link=response.context.get('user'),product_searched=Products.objects.get(id_code=20930378), product_substitute=Products.objects.get(id_code=20930353))
-        self.favoris_list = Favorite.objects.all()
-        
-    def test_pagination_is_three(self):
-        self.client.force_login(self.user_1)
-        response = self.client.get(reverse('display_account'))
+        fav_1, created = Favorite.objects.get_or_create(user_link=response.context.get('user'),product_searched=Products.objects.get(id_code=20930300), product_substitute=Products.objects.get(id_code=20930392))
+        fav_2, created = Favorite.objects.get_or_create(user_link=response.context.get('user'),product_searched=Products.objects.get(id_code=20930391), product_substitute=Products.objects.get(id_code=20930398))
+        fav_3, created =Favorite.objects.get_or_create(user_link=response.context.get('user'),product_searched=Products.objects.get(id_code=20930378), product_substitute=Products.objects.get(id_code=20930353))
         self.assertEqual(response.status_code, 200)
         self.assertTrue('page_obj' in response.context)
         self.assertTrue(response.context['page_obj'] == True)
-        print(len(response.context['self.favoris_list']))
+        fa = Favorite.objects.all()
+        print(fa)
         self.assertTrue(len(response.context['self.favoris_list']) == 4)
-
-    def test_lists_all_products(self):
-        # Get second page and confirm it has (exactly) remaining 3 items
-        self.client.force_login(self.user_1)
-        response = self.client.get(reverse('display_account')+'?page=2')
-        self.assertEqual(response.status_code, 200)
+        response_2 = self.client.get(reverse('display_account')+'?page=2')
+        self.assertEqual(response_2.status_code, 200)
         self.assertTrue('page_obj' in response.context)
-        self.assertTrue(response.context['page_obj'] == True)
-        self.assertTrue(len(response.context['self.favoris_list']) == 1)
+        self.assertTrue(response_2.context['page_obj'] == True)
+        self.assertTrue(len(response_2.context['self.favoris_list']) == 1)
    
