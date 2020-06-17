@@ -25,21 +25,5 @@ class SignUpFormTest(TestCase):
         user, created = User.objects.get_or_create(username="papa", last_name="sebti", first_name="zahia", email="hh@hotmail.com", password="123456789")
         data = {"username": user.username, "password": user.password}
         form = SignInForm(data)
-        self.assertTrue(form.is_valid())
-    
-    def test_clean_fake_password(self):
-        test = SignInForm()
-        user, created = User.objects.get_or_create(username="papa", last_name="sebti", first_name="zahia", email="hh@hotmail.com", password="123456789")
-        username_entry = "papa"
-        password_entry = "09876543"
-        
-        with self.assertRaises(ValidationError):
-            user = auth.authenticate(username=username_entry, password=password_entry)
-
-    def test_clean_fake_username(self):
-        test = SignInForm()
-        user, created = User.objects.get_or_create(username="papa", last_name="sebti", first_name="zahia", email="hh@hotmail.com", password="123456789")
-        username_entry = "maman"
-        password_entry = "123456789"
-        user = auth.authenticate(username=username_entry, password=password_entry)
-        self.assertRaises(ValidationError)
+       
+   

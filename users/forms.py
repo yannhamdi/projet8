@@ -16,15 +16,14 @@ class SignInForm(forms.Form):
     username = forms.CharField(label= "username", max_length=20)
     password = forms.CharField(label = "Mot-de-Passe", widget=forms.PasswordInput, min_length = 6, max_length= 16)
     def clean(self):
-        """method that checks if the datas entered by the user match the database"""
-        cleaned_data = super(SignInForm,self).clean()
-        username_entry = cleaned_data.get("username")
-        password_entry = cleaned_data.get("password")
-        if username_entry and password_entry:
-            user = auth.authenticate(username=username_entry, password=password_entry)
-                 pass
-             else:
-                 raise forms.ValidationError("Vos identifiants sont érronés")
-    
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
 
+        if username and password:
+            self.user_cache = authenticate(username=username,
+                                           password=password)
+            if self.user_cache is None:
+                raise forms.ValidationError('Identifiants incorrects')
+                   
 
+        return self.cleaned_data

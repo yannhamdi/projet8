@@ -62,28 +62,12 @@ class SuccessfulSignUpTests(TestCase):
         self.response_2 = self.client.post(url, data)
         self.assertEqual(self.response_2.status_code, 302)
 
-    def test_signin_form_valid(self):
-        url = reverse('signin')
-        self.client.get(reverse('signout'))
-        user, created = User.objects.get_or_create(username='toto',
-            last_name='hamdi',
-            first_name='yann',
-            email='ham@homtmail.com',
-            password='abcdef123456')
-        
-        data = {'username': 'toto', 'password': 'abcdef123456'}
-        user.set_password('123456789')
-        user.save()
-        user = auth.authenticate(username='toto', password= '123456789')
-        login = self.client.login(username='toto', password= '123456789')
-        form = SignInForm(data={'username': 'toto', 'password':'123456789'})
-        self.assertTrue(login)
-        self.assertTrue(form.is_valid())
-
-
-
+    
     def test_signout(self):
         response = self.client.get(reverse('signout'))
+
+
+
         self.assertEqual(response.status_code, 302)
 
     def test_account(self):
