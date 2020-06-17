@@ -1,4 +1,6 @@
-
+{% extends 'base.html' %}
+{% block title %}Faites votre recherche{% endblock title %}
+{% block content %}
 <form action="{% url 'search' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
@@ -10,3 +12,4 @@
 &nbsp;<a href="{% url 'display_account' %}"> Voir vos recherches </a>
 {% else %}
 <a href="{% url 'signin' %}"> Signin </a> {% endif %}
+{% endblock content %}
