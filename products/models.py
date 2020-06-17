@@ -1,5 +1,5 @@
 from django.db import models
-
+from products.managers import ProductManager
 
 
 
@@ -20,3 +20,5 @@ class Products(models.Model):
     category = models.ManyToManyField("Category", related_name="products")
     def __str__(self):
         return self.food_name
+
+    objects = ProductManager()

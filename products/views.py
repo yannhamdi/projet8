@@ -4,6 +4,7 @@ from django.core.paginator import Paginator
 from django.urls import reverse
 from random import randint
 from products.models import Products
+
 from .forms import ProductSearch
 
 
@@ -23,18 +24,9 @@ def search(request):
     form = ProductSearch(request.POST or None)
     if form.is_valid():
         prod = form.cleaned_data['search']
-        produ_id = Products.objects.filter(food_name__icontains=prod)
-        category_product = produ_id[0].category.all()
-        if len(category_product) > 1:
-            cat = category_product[0]
-            better_product = Products.objects.filter(category=cat).filter(nutrition_grade__lt=produ_id[0].nutrition_grade)
-            i=(len(better_product))-1
-            j=randint(0,i)
-        cat = category_product[0]
-        better_product = Products.objects.filter(category=cat).filter(nutrition_grade__lt=produ_id[0].nutrition_grade)
-        i=(len(better_product))-1
-        j=randint(0,i)
-        return redirect(reverse('display', args=[int(produ_id[0].id_code), int(better_product[j].id_code)]))
+        search_sub = Products.objects.search_products(prod)
+        if search_sub:
+            return redirect(reverse('display', args=[int(search_sub['product_searched']), int(search_sub['substitue'])]))
     return render(request, 'products/search.html', locals())
 
 
