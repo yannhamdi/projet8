@@ -1,5 +1,5 @@
 from django.contrib.auth import login as auth_login
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, logout
 from django.core.exceptions import ValidationError
 from django.contrib import auth
 from django.shortcuts import render, redirect
@@ -16,7 +16,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             auth_login(request, user)
-            return redirect('search')
+            return redirect('home')
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
@@ -33,7 +33,7 @@ def signin(request):
             user = auth.authenticate(username=username, password=password)
             if user:
                 auth.login(request, user)
-                return redirect('/products/search/?next=%s' % request.path)
+                return redirect('/products/home/?next=%s' % request.path)
             
     else:
         form = SignInForm()
@@ -42,8 +42,7 @@ def signin(request):
 def signout(request):
     """views that logs out"""
     auth.logout(request)
-    return redirect('search')
-
+    return redirect('home')
 
 def account(request):
     """ views that display user's details"""

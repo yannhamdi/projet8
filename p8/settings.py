@@ -144,3 +144,4 @@ FOOD_CATEGORIES =[
 AUTH_USER_MODEL = "users.User"
 
 LOGIN_URL = "/users/signin"
+LOGOUT_REDIRECT_URL = "/products/home"

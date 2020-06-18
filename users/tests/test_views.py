@@ -22,7 +22,7 @@ class SuccessfulSignUpTests(TestCase):
             'password2': 'abcdef123456'
         }
         self.response = self.client.post(url, data)
-        self.home_url = reverse('search')
+        self.home_url = reverse('home')
         
     def test_redirection(self):
         '''
@@ -65,6 +65,7 @@ class SuccessfulSignUpTests(TestCase):
     
     def test_signout(self):
         response = self.client.get(reverse('signout'))
+        self.assertEqual(self.response.status_code, 302)
 
 
 
