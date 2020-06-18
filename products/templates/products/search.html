@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% block title %}Faites votre recherche{% endblock title %}
 {% block content %}
 <form action="{% url 'search' %}" method="post">
     {% csrf_token %}
