@@ -9,11 +9,11 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <h2 class="text-white-75 font-weight-light mb-5"> Trouvez un produit de substitution pour ceux que vous consommez de tous les jours </h2>
-                        <form action="{% url 'search' %}" method="get">
-                                         {% csrf_token %}
-                                       {{ form.as_p }}
-                       <input type="submit" value="Submit" />
-                    </form>
+                        <form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
                     </div>
                 </div>
             </div>

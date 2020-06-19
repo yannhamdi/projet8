@@ -26,6 +26,7 @@ def signup(request):
 def signin(request):
     """view that connect the user"""
     if request.method == 'POST':
+        
         form = SignInForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data["username"]
@@ -33,8 +34,12 @@ def signin(request):
             user = auth.authenticate(username=username, password=password)
             if user:
                 auth.login(request, user)
-                return redirect('/products/home/?next=%s' % request.path)
-            
+                context = {
+                    "user": request.user,
+                }
+                nextt = request.GET.get('next', 'home')
+                if nextt:
+                    return redirect(nextt)
     else:
         form = SignInForm()
     return render(request, 'registration/signin.html', {"form": form})

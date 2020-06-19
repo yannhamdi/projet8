@@ -18,14 +18,18 @@ class ProductsView(TestCase):
         self.product_2.category.add(s)
         self.product_2.save()
 
-
+    def test_home(self):
+        response = self.client.get(reverse('home'))
+        self.assertEqual(response.status_code, 200)
     def test_search(self):
         response = self.client.get(reverse('search'))
         self.assertEqual(response.status_code, 200)
     def test_search_with_post(self):
         response_1 = self.client.post(reverse('search'), {'search': 'reine'} )
         self.assertEqual(response_1.status_code, 302)
-
+    def test_search_no_result(self):
+        response = self.client.get(reverse('no_response'))
+        self.assertEqual(response.status_code, 200)
     def test_lire(self):
         response = self.client.post(reverse('lire', args=[20930395]))
         self.assertEqual(response.status_code, 200)

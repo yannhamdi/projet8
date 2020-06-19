@@ -38,9 +38,9 @@
 
                             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'signin' %}"> <i class="fas fa-sign-in-alt"></i></a></li>
                             {% if user.is_authenticated  %}
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'signin' %}">Se Déconnecter</a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'signout' %}">Se Déconnecter</a></li>
                             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'account' %}"> <i class="fas fa-user"></i></a></li>
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'display_account' %}"> <i class="fas fa-carrot"></i>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'display_account' %}"> <i class="fas fa-carrot"></i></a></li>
                             {% endif %}
                         </ul>
                     </div>

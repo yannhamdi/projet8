@@ -10,13 +10,13 @@ from favoris.models import Favorite
 
 
 
-@login_required()
+@login_required
 def saving_search(request,id_searched, id_substitue):
     """views to save the user's search"""
     product = Products.objects.get(id_code=id_searched)
     sub = Products.objects.get(id_code=id_substitue)
     Favorite.objects.get_or_create(user_link=request.user, product_searched=product, product_substitute=sub)
-    return redirect('search')
+    return redirect('home')
 
 
 

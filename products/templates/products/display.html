@@ -8,8 +8,10 @@
 <img src= {{ product_sub.image_url }}>
 <h3> Nutrition grade {{ product_sub.nutrition_grade}} </h3>
 <h3><a href="">{{ product_sub.food_link }} </a></h3>
+{% if user.is_authenticated  %}
 <h3><a href="{% url 'saving_search' product_searched.id_code product_sub.id_code %}"> Enregistrez votre recherche </a></h3>
-{% if empty %}
+{% endif}
+{% elif empty %}
 
 <div class="product-no-result"> Désolé aucun produit trouvé </div>
 {% endif %}

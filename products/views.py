@@ -7,8 +7,10 @@ from products.models import Products
 from .forms import ProductSearch
 
 def home(request):
-    form = ProductSearch()
-    return render(request, 'products/home.html', {'form': form})
+    form = ProductSearch(request.POST or None)
+    context = {'form': form}
+    return render(request, 'products/home.html', context)
+
 def display(request, id_searched, id_substitue):
     """afficher l'aliment recherché ainsi que l'aliment proposé"""
     product_searched = Products.objects.get(id_code=id_searched)
@@ -28,6 +30,7 @@ def search(request):
         search_sub = Products.objects.search_products(prod)
         if search_sub:
             return redirect(reverse('display', args=[int(search_sub['product_searched']), int(search_sub['substitue'])]))
+        return render(request, 'products/no_response.html')
     return render(request, 'products/search.html', locals())
 
 
