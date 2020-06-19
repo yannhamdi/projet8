@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
  {% block header %}
              <header class="masthead">
             <div class="container h-100">
@@ -26,8 +27,10 @@
                     <div class="col-lg-8 text-center">
                         <h2 class="text-white mt-0">Colette et Remy</h2>
                         <hr class="divider light my-4" />
-                        <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+                        <p class="text-white-50 mb-4">Notre rapport à l’alimentation a évolué au fil du temps. Du besoin primaire et ancestral de manger, nous sommes passés à une relation plus culturelle, sociale, philosophique, artistique. Alors, pourquoi ne pas joindre l'utilise l'agréable. Ensemble... Mangeons sain!!! </p>
+                        <img src="{% static 'img/colette.png' %}" alt="image de Colette">
+                        <img src="{% static 'img/remy.png' %}" alt="image de Remy">
+                        
                     </div>
                 </div>
             </div>

@@ -33,14 +33,15 @@
                             <li class="nav-item"><a class="nav-link js-scroll-trigger" ><form action="{% url 'search' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Submit" />
 </form>
-
+                            {% if not user.is_authenticated  %}
                             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'signin' %}"> <i class="fas fa-sign-in-alt"></i></a></li>
+                            {% endif %}
                             {% if user.is_authenticated  %}
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'signout' %}">Se Déconnecter</a></li>
                             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'account' %}"> <i class="fas fa-user"></i></a></li>
                             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'display_account' %}"> <i class="fas fa-carrot"></i></a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'signout' %}"><i class="fas fa-sign-out-alt"></i></a></li>
+                            
                             {% endif %}
                         </ul>
                     </div>
@@ -59,7 +60,7 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+                        
                     </div>
                 </div>
             </div>
