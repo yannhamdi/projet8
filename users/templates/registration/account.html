@@ -1,21 +1,23 @@
-
 {% extends 'base.html' %}
 {% load static %}
+ 
  {% block header %}
 
              <header class="masthead">
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-10 align-self-end">
-                    	<div class="account">
+                        <div class="container-fluid" style="background-image: url({% static 'img/bg-account.jpg' %}); overflow: hidden;">
+                                <div class="account_details">
                         <h2 class="text-uppercase text-white font-weight-bold">Ahoy</h2>
                         <h3 class="text-uppercase text-white font-weight-bold">{{ user.first_name}}</h3>
                         <hr class="divider my-4" />
                     </div>
-                   
-                    </div>
-                </div>
+                   </div>
+                    
+               </div>
+               </div>
+                
             </div>
         </header>
         {% endblock header %}
- 

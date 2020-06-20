@@ -8,6 +8,7 @@ from django import forms
 
 from .forms import SignUpForm, SignInForm
 from users.models import User
+from products.forms import ProductSearch
 
 def signup(request):
     """views that allows the user to signup"""
@@ -52,7 +53,8 @@ def signout(request):
 def account(request):
     """ views that display user's details"""
     user_details = User(request)
-    return render(request, 'registration/account.html', {'user_details': user_details})
+    form = ProductSearch(request.POST or None)
+    return render(request, 'registration/account.html', {'user_details': user_details, 'form': form})
 
 
 

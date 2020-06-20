@@ -30,10 +30,11 @@
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav ml-auto my-2 my-lg-0">
 
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" ><form action="{% url 'search' %}" method="post">
+                            <li class="nav-item"><form action="{% url 'search' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-</form>
+</form> </li>
+
                             {% if not user.is_authenticated  %}
                             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'signin' %}"> <i class="fas fa-sign-in-alt"></i></a></li>
                             {% endif %}
