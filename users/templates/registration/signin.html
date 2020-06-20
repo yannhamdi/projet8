@@ -1,45 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+ {% block nav %}
+           <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+                <div class="container">
+                    <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">
+                        <img src="{% static 'img/logo_pur_beurre.png' %}" alt="icone entreprise"> Pur Beurre</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  
+                </div>
+            </nav>
+        {% endblock nav %}
+     
+     
+
+
+   {% block header %}
+<header class="masthead">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <hr class="divider my-4" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                      <h4 class="text-white-75 font-weight-light mb-5"> Connectez-vous </h4>
+                        <form action="{% url 'signin' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="login" />
+    <input type="hidden" name="next" value="{{ next }}" />
 
 
 
-
-
-
-
-<form method="post" action="{% url 'signin' %}">
-{% csrf_token %}
-<input type="hidden" name="next" value="{{ next }}" />
-
-<table>
-<tr>
-    <td>{{ form.username.label_tag }}</td>
-    <td>{{ form.username }}</td>
-</tr>
-<tr>
-    <td>{{ form.password.label_tag }}</td>
-    <td>{{ form.password }}</td>
-</tr>
-</table>
-
-<input type="submit" value="login">
-</form>
 
 <a href="{% url 'signup' %}"> Nouvel utilisateur? Inscrivez-vous ici </a>
 
+</form>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-  {% if form.errors %}
-    <div class="alert alert-error">
-      <h4>Veuillez vérifier les informations ci-dessous</h4>
-      <ul>
-        {% for field in form %}
-          {% if field.errors %}
-            {% for error in field.errors %}
-              <li><a href="#id_{{ field.name }}" class="error">{{ error|escape }}</a></li>
-            {% endfor %}
-          {% endif %}
-        {% endfor %}
-      </ul>
-      {% if form.non_field_errors %}
-        {{ form.non_field_errors }}
-      {% endif %}
-    </div>
-  {% endif %}
+    {% endblock header %}
