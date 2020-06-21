@@ -10171,6 +10171,23 @@ header.searchresult {
   height: 300px;
 }
 
+.nutrition {
+  text-transform: uppercase;
+  color: #C45525;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+b .nutrition {
+  position: relative;
+  top: -160px;
+  right: 0px;
+  border: 3px;
+  border-radius: 50%;
+}
+
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
 }

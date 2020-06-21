@@ -20,21 +20,37 @@
         </header>
         {% endblock header %}
  {% block content %}
-        <section class="page-section bg-primary" id="about" style="width: 100%;
-    height: 450px; padding:15px;">
+        <section class="page-section bg-primary" id="about" style=" width: 100%; padding:15px;">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0"> Vous pouvez remplacer le produit recherché par celui ci-dessous plus sain</h2>
-                        <img src="{{product_sub.image_url}}" height="150", width= "150" style="border-radius: 10px"; alt="image de substitution">
+                        <h2 class="text-white mt-0"> Vous pouvez remplacer cet aliment par</h2>
+                        <img src="{{product_sub.image_url}}" height="150", width= "150" style="border-radius: 10px; position: relative; z-index: 2 ;" alt="image de substitution">
+                        <div class="container searchresult">
+                               <div class="nutrition">  <b>{{ product_sub.nutrition_grade }}</b></div>
+
                         <h2 class="text-white-50 mb-4">{{ product_sub.food_name}} </h2>
+                    </div>
                  {% if user.is_authenticated  %}       
                 <h4><a class="text-white-75 font-weight-light mb-5" href="{% url 'saving_search' product_searched.id_code product_sub.id_code %}">
                 	<button type="submit"> Sauvegardez votre recherche </button>
                  {% endif %}
-                    </div>
-                </div>
+               </div>
+                </div> 
             </div>
         </section>
 
          {% endblock content %}
+
+
+{% block footer %}
+         <footer class="footer" style="bottom: 0; position: absolute; height: 1.5em; padding-left: 40%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                ><div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div></div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock footer %}
