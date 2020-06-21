@@ -13,9 +13,10 @@ def home(request):
 
 def display(request, id_searched, id_substitue):
     """afficher l'aliment recherché ainsi que l'aliment proposé"""
+    form = ProductSearch(request.POST or None)
     product_searched = Products.objects.get(id_code=id_searched)
     product_sub = Products.objects.get(id_code=id_substitue)
-    return render(request, 'products/display.html', {'product_searched': product_searched, 'product_sub': product_sub})
+    return render(request, 'products/display.html', {'product_searched': product_searched, 'product_sub': product_sub, 'form':form})
 
 
 def lire(request, id):

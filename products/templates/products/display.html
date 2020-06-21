@@ -27,6 +27,10 @@
                         <h2 class="text-white mt-0"> Vous pouvez remplacer le produit recherché par celui ci-dessous plus sain</h2>
                         <img src="{{product_sub.image_url}}" width="200" height="200"  alt="image de substitution">
                         <h2 class="text-white-50 mb-4">{{ product_sub.food_name}} </h2>
+                 {% if user.is_authenticated  %}       
+                <h4><a class="text-white-75 font-weight-light mb-5" href="{% url 'saving_search' product_searched.id_code product_sub.id_code %}">
+                	<button type="submit"> Sauvegardez votre recherche </button>
+                 {% endif %}
                     </div>
                 </div>
             </div>
