@@ -30,7 +30,7 @@ def search(request):
         search_sub = Products.objects.search_products(prod)
         if search_sub:
             return redirect(reverse('display', args=[int(search_sub['product_searched']), int(search_sub['substitue'])]))
-        return render(request, 'products/no_response.html')
+        return render(request, 'products/no_response.html', {'form':form})
     return render(request, 'products/search.html', locals())
 
 
