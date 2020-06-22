@@ -1,7 +1,6 @@
 """ module that import products from openfood api"""
 
 import requests
-from django.conf import settings
 
 
 def get_json(category):
@@ -14,12 +13,9 @@ def get_json(category):
                "tag_0": category,
                "json": 1,
                "page_size": 1000,
-               
              }
     response = requests.get(url, params=params)
     products = []
     if response.status_code == 200:
         products = response.json()['products']
         return products
-
-
