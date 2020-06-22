@@ -20,8 +20,9 @@ def display(request, id_searched, id_substitue):
 
 
 def lire(request, id):
+    form = ProductSearch(request.POST or None)
     article = get_object_or_404(Products.objects.filter(id_code=id))
-    return render(request, 'products/lire.html', {'article':article})
+    return render(request, 'products/lire.html', {'article':article, 'form':form})
 
 
 def search(request):

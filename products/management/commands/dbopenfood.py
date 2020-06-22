@@ -19,7 +19,7 @@ class Command(BaseCommand):
             self.saving_cat(category)
     def checking_blank(self, element):
         """ method that check blank lines"""
-        keys = ["code", "product_name", "nutrition_grade_fr", "url", "image_url", "categories"]
+        keys = ["code", "product_name", "nutrition_grade_fr", "url", "image_url", "categories", "image_nutrition_url"]
         for key in keys:
             if key not in element or not element[key]:
                 return False
@@ -39,7 +39,8 @@ class Command(BaseCommand):
                         food_name=element["product_name"],
                         nutrition_grade=element["nutrition_grade_fr"],
                                     food_link=element["url"],
-                             image_url=element["image_url"])
+                             image_url=element["image_url"],
+                             image_nutrition_url =element["image_nutrition_url"])
                 papa = (element["categories"]).split(",")
                 for item in papa:
                     p = (item.lower()).strip()

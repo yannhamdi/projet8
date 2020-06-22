@@ -15,6 +15,7 @@ class Products(models.Model):
     id_code = models.BigIntegerField(primary_key=True)
     food_name = models.CharField(max_length=255)
     nutrition_grade = models.CharField(max_length=1)
+    image_nutrition_url = models.URLField(max_length=255)
     image_url = models.URLField(max_length=255)
     food_link = models.URLField(max_length=255)
     category = models.ManyToManyField("Category", related_name="products")
