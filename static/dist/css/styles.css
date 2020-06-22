@@ -10180,12 +10180,14 @@ header.searchresult {
   line-height: 30px;
 }
 
-b .nutrition {
+b {
   position: relative;
   top: -160px;
   right: 0px;
-  border: 3px;
+  border: 3px #C45525 solid;
   border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
 }
 
 .text-white-75 {

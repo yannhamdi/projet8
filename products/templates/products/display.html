@@ -30,7 +30,7 @@
                                <div class="nutrition">  <b>{{ product_sub.nutrition_grade }}</b></div>
 
                         <h2 class="text-white-50 mb-4">{{ product_sub.food_name}} </h2>
-                    </div>
+                  
                  {% if user.is_authenticated  %}       
                 <h4><a class="text-white-75 font-weight-light mb-5" href="{% url 'saving_search' product_searched.id_code product_sub.id_code %}">
                 	<button type="submit"> Sauvegardez votre recherche </button>
