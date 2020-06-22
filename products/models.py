@@ -2,10 +2,10 @@ from django.db import models
 from products.managers import ProductManager
 
 
-
 class Category(models.Model):
     """we create the name for each categories"""
     cat = models.CharField(max_length=100, unique=True)
+
     def __str__(self):
         return self.cat
 
@@ -19,6 +19,7 @@ class Products(models.Model):
     image_url = models.URLField(max_length=255)
     food_link = models.URLField(max_length=255)
     category = models.ManyToManyField("Category", related_name="products")
+
     def __str__(self):
         return self.food_name
 
