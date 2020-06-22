@@ -24,13 +24,13 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0"> Vous pouvez remplacer cet aliment par</h2>
+                        <h2 class=" mt-0 color-writing" style="color:#E8A75D;"> Vous pouvez remplacer cet aliment par</h2>
                         <div class="container searchresult" style="margin-top: 15px;">
                         <img src="{{product_sub.image_url}}" height="150", width= "150" style="border-radius: 10px; position: relative; z-index: 2 ;" alt="image de substitution">
                         
                                <div class="nutrition">  <b>{{ product_sub.nutrition_grade }}</b></div>
 
-                        <a class="text-white-50 mb-4" style="display: block;" href="{% url 'lire' product_sub.id_code %}">{{ product_sub.food_name}} </a>
+                          <a class=" mb-4" style="display: block; color: #E8A75D;" href="{% url 'lire' product_sub.id_code %}">{{ product_sub.food_name}} </a>
                   
                  {% if user.is_authenticated  %}       
                 <h4><a class="text-white-75 font-weight-light mb-5" href="{% url 'saving_search' product_searched.id_code product_sub.id_code %}">
@@ -42,7 +42,6 @@
         </section>
 
          {% endblock content %}
-
 
 {% block footer %}
          <footer class="footer" style="bottom: 0; position: absolute; height: 1.5em; padding-left: 40%;">

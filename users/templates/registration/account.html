@@ -8,8 +8,8 @@
                     <div class="col-lg-12 ">
                         <div class="account" >
                                 
-                        <h1 class="text-uppercase text-white font-weight-bold">Ahoy</h1>
-                        <h2 class="text-uppercase text-white font-weight-bold">{{ user.first_name}}</h2>
+                        <h1 class="text-uppercase" style="color:#E8A75D;">Ahoy</h1>
+                        <h2 class="text-uppercase"style="color:#E8A75D;">{{ user.first_name}}</h2>
                         <hr class="divider my-4" />
                     </div>
                 </div>
@@ -23,7 +23,7 @@
         {% block content %}
         <div class="email" style="height:200px; padding-top: 50px;padding-bottom: 50px;">
             <div class="col-lg-12">
-         <h2>Votre adresse email est {{ user.email}}</h2>
+         <h2 class="mail" style="color:#E8A75D;">Votre adresse email est {{ user.email}}</h2>
      </div>
  </div>
         {% endblock content %}

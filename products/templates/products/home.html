@@ -6,11 +6,11 @@
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-10 align-self-end">
-                        <h1 class="text-uppercase text-white font-weight-bold">Du gras oui mais de qualité</h1>
+                        <h1 class="text-uppercase color-writing" style="color:#E8A75D;">Du gras oui mais de qualité</h1>
                         <hr class="divider my-4" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <h2 class="text-white-75 font-weight-light mb-5"> Trouvez un produit de substitution pour ceux que vous consommez de tous les jours </h2>
+                        <h2 class="text-white-75 color-writing font-weight-light mb-5" style="color:#E8A75D;"> Trouvez un produit de substitution pour ceux que vous consommez de tous les jours </h2>
                         <form action="{% url 'search' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
@@ -26,9 +26,9 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">Colette et Remy</h2>
+                        <h2 class="mt-0 color-writing" style="color: #E8A75D;">Colette et Remy</h2>
                         <hr class="divider light my-4" />
-                        <p class="text-white-50 mb-4">Notre rapport à l’alimentation a évolué au fil du temps. Du besoin primaire et ancestral de manger, nous sommes passés à une relation plus culturelle, sociale, philosophique, artistique. Alors, pourquoi ne pas joindre l'utilise l'agréable. Ensemble... Mangeons sain!!! </p>
+                        <p class="mb-4 color-writing" style="color:#E8A75D;">Notre rapport à l’alimentation a évolué au fil du temps. Du besoin primaire et ancestral de manger, nous sommes passés à une relation plus culturelle, sociale, philosophique, artistique. Alors, pourquoi ne pas joindre l'utilise l'agréable. Ensemble... Mangeons sain!!! </p>
                         <img src="{% static 'img/colette.png' %}" alt="image de Colette">
                         <img src="{% static 'img/remy.png' %}" alt="image de Remy">
                         
@@ -42,7 +42,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="mt-0">Contactez-nous</h2>
+                        <h2 class="mt-0 color-writing" style="color: #E8A75D;">Contactez-nous</h2>
                         <hr class="divider my-4" />
                         <p class="text-muted mb-5">Envie de partager avec nous, nous sommes là!</p>
                     </div>

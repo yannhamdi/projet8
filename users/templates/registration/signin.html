@@ -22,8 +22,8 @@
                         <hr class="divider my-4" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                      <h4 class="text-white-75 font-weight-light mb-5"> Connectez-vous </h4>
-                        <form action="{% url 'signin' %}" method="post">
+                      <h4 class="color-writing font-weight-light mb-5" style="color:#E8A75D;"> Connectez-vous </h4>
+                        <form class="color-writing" style="color:#E8A75D;"action="{% url 'signin' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="login" />
@@ -32,7 +32,7 @@
 
 
 
-<a href="{% url 'signup' %}"> Nouvel utilisateur? Inscrivez-vous ici </a>
+<a class="color-writing" style="color:#E8A75D;"href="{% url 'signup' %}"> Nouvel utilisateur? Inscrivez-vous ici </a>
 
 </form>
                     </div>
