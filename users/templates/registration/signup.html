@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                       <h4 class="text-white-75 font-weight-light mb-5"> Inscrivez vous </h4>
-                        <form action="{% url 'signin' %}" method="post">
+                        <form action="{% url 'signup' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Inscrivez-vous" />
