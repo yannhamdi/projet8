@@ -25,15 +25,14 @@
                       {% for favorite in page_obj %}
                       
                         <div class="results col-md-4 col-sm-6">
-        <h3> Aliment recherché {{ favorite.product_searched.food_name }} </h3>
-        <p><a href="{% url 'lire' favorite.product_searched.id_code %}">Lire la suite</a></p>
+        <h3 class=" mb-4" style="display: block; color: #E8A75D;"> Aliment recherché </h3>
+        <p><a class=" mb-4" style="display: block; color: #E8A75D;" href="{% url 'lire' favorite.product_searched.id_code %}">{{favorite.product_searched.food_name }}</a></p>
         <h4> {{ favorite.product_searched.nutrition_grade }} </h4>
         <p>
         <img src= {{ favorite.product_searched.image_url }} style="height:100px; width:100px;"><</p>
-     
-       
-        <h3> Aliment trouvé {{ favorite.product_substitute.food_name }} </h3>
-        <p><a href="{% url 'lire' favorite.product_substitute.id_code %}">Lire la suite</a></p>
+         <h3 class=" mb-4" style="display: block; color: #E8A75D;"> Aliment trouvé </h3>
+     <p><a class=" mb-4" style="display: block; color: #E8A75D;" href="{% url 'lire' favorite.product_substitute.id_code %}">{{ favorite.product_substitute.food_name}}
+     </a></p>
         <h4> {{ favorite.product_substitute.nutrition_grade }} </h4>
         <p>
         <img src= {{ favorite.product_substitute.image_url }} style="height:100px; width:100px;">
