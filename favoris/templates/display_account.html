@@ -21,27 +21,28 @@
 
 {% block content %}
         <section class="page-section bg-primary" id="about" style=" width: 100%; padding:15px;">
-                <div class="row">
-                    <div class="col-md-4">
+                    <div class="row">
                       {% for favorite in page_obj %}
+                      
+                        <div class="results col-md-4 col-sm-6">
         <h3> Aliment recherché {{ favorite.product_searched.food_name }} </h3>
         <p><a href="{% url 'lire' favorite.product_searched.id_code %}">Lire la suite</a></p>
         <h4> {{ favorite.product_searched.nutrition_grade }} </h4>
         <p>
-        <img src= {{ favorite.product_searched.image_url }} style="height:100px; width:100px;">
-        </p>
+        <img src= {{ favorite.product_searched.image_url }} style="height:100px; width:100px;"><</p>
+     
+       
         <h3> Aliment trouvé {{ favorite.product_substitute.food_name }} </h3>
         <p><a href="{% url 'lire' favorite.product_substitute.id_code %}">Lire la suite</a></p>
         <h4> {{ favorite.product_substitute.nutrition_grade }} </h4>
         <p>
         <img src= {{ favorite.product_substitute.image_url }} style="height:100px; width:100px;">
-        </p>
-    </div>
+        </p> </div>
+  
+        
 {% empty %}
     <p>Aucun article.</p>
-{% endfor %}
-<div class="row">
-                    <div class="col-md-4">
+ {% endfor %} </div></div>
 <div class="pagination">
     <span class="step-links">
         {% if page_obj.has_previous %}
@@ -61,14 +62,8 @@
 </div> </div></div>
 {% endblock content %}
 
-{% block footer %}
-         <footer class="footer" style="bottom: 0; position: absolute; height: 1.5em; padding-left: 40%;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                ><div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div></div>
-            </div>
-        </div>
-    </div>
-</footer>
-{% endblock footer %}
+ {% block footer %}
+        <footer class="bg-light py-5 flex-shrink-0">
+            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div></div>
+        </footer>
+        {% endblock footer %}
