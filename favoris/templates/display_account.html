@@ -1,24 +1,47 @@
-<h1> vos recherches</h1>
+{% extends 'base.html' %}
+{% load static %}
+ {% block header %}
+
+             <header class="masthead" style="background-image: url({% static 'img/bg-account.jpg' %}); height:100px;">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-12 ">
+                        <div class="account" >
+                                
+                        <h1 class="text-uppercase" style="color:#E8A75D;">Vos recherches</h1>
+                        <hr class="divider my-4" />
+                    </div>
+                </div>
+               </div>
+               </div>
+                
+            </div>
+        </header>
+        {% endblock header %}
 
 
-{% for favorite in page_obj %}
-    <div class="article">
-    	<h3> Aliment recherché {{ favorite.product_searched.food_name }} </h3>
-    	<p><a href="{% url 'lire' favorite.product_searched.id_code %}">Lire la suite</a></p>
-    	<h4> {{ favorite.product_searched.nutrition_grade }} </h4>
-    	<p>
-    	<img src= {{ favorite.product_searched.image_url }}>
+{% block content %}
+        <section class="page-section bg-primary" id="about" style=" width: 100%; padding:15px;">
+                <div class="row">
+                    <div class="col-md-4">
+                      {% for favorite in page_obj %}
+        <h3> Aliment recherché {{ favorite.product_searched.food_name }} </h3>
+        <p><a href="{% url 'lire' favorite.product_searched.id_code %}">Lire la suite</a></p>
+        <h4> {{ favorite.product_searched.nutrition_grade }} </h4>
+        <p>
+        <img src= {{ favorite.product_searched.image_url }} style="height:100px; width:100px;">
         </p>
         <h3> Aliment trouvé {{ favorite.product_substitute.food_name }} </h3>
         <p><a href="{% url 'lire' favorite.product_substitute.id_code %}">Lire la suite</a></p>
         <h4> {{ favorite.product_substitute.nutrition_grade }} </h4>
         <p>
-        <img src= {{ favorite.product_substitute.image_url }}>
+        <img src= {{ favorite.product_substitute.image_url }} style="height:100px; width:100px;">
         </p>
     </div>
 {% empty %}
     <p>Aucun article.</p>
 {% endfor %}
+<div class="row">
+                    <div class="col-md-4">
 <div class="pagination">
     <span class="step-links">
         {% if page_obj.has_previous %}
@@ -35,4 +58,17 @@
             <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
         {% endif %}
     </span>
-</div>
+</div> </div></div>
+{% endblock content %}
+
+{% block footer %}
+         <footer class="footer" style="bottom: 0; position: absolute; height: 1.5em; padding-left: 40%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                ><div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div></div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock footer %}

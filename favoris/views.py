@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 
 from products.models import Products
 from favoris.models import Favorite
-
+from products.forms import ProductSearch
 
 @login_required
 def saving_search(request, id_searched, id_substitue):
@@ -20,9 +20,10 @@ def saving_search(request, id_searched, id_substitue):
 @login_required
 def display_account(request):
     """views that display searched details"""
+    form = ProductSearch(request.POST or None)
     favoris = Favorite.objects.filter(
         user_link=request.user).order_by('product_searched')
     paginator = Paginator(favoris, 3)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-    return render(request, 'display_account.html', {'page_obj': page_obj})
+    return render(request, 'display_account.html', {'page_obj': page_obj, 'form': form})
