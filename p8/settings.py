@@ -93,7 +93,7 @@ DATABASES = {
         'NAME': 'nutella',
         'USER': 'yannhamdi',
         'PASSWORD': 'yh250980',
-        'HOST': '',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
 
     }
@@ -161,6 +161,10 @@ AUTH_USER_MODEL = "users.User"
 
 LOGIN_URL = "/users/signin"
 LOGOUT_REDIRECT_URL = "/products/home"
+if os.environ.get('ENV') == 'PRODUCTION':
+    # ...
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(db_from_env)
 if os.environ.get('ENV') == 'PRODUCTION':
 
     # Static files settings
