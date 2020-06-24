@@ -39,3 +39,8 @@ def search(request):
                                           int(search_sub['substitue'])]))
         return render(request, 'products/no_response.html', {'form': form})
     return render(request, 'products/search.html', locals())
+
+def mention(request):
+    form = ProductSearch(request.POST or None)
+    context = {'form': form}
+    return render(request, "products/mentions_legales.html", context)
