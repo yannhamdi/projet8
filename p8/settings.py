@@ -174,5 +174,5 @@ if os.environ.get('ENV') == 'PRODUCTION':
     STATICFILES_DIRS = (
         os.path.join(PROJECT_ROOT, 'static'),
     )
-    django_heroku.settings(locals())
+django_heroku.settings(locals())
  
