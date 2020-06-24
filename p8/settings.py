@@ -27,10 +27,8 @@ SECRET_KEY = 'l^)!j(k5j(3+g^s+e80w&6dsq&=*w=$aw1bd0)o2tnn77m%$p3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.environ.get('ENV') == 'PRODUCTION':
-    DEBUG = False
-else:
-    DEBUG = True
+
+DEBUG = True
 
 ALLOWED_HOSTS = ['p8-yh.herokuapp.com', '127.0.0.1']
 
@@ -174,5 +172,8 @@ if os.environ.get('ENV') == 'PRODUCTION':
     STATICFILES_DIRS = (
         os.path.join(PROJECT_ROOT, 'static'),
     )
-django_heroku.settings(locals())
+if os.environ.get("ENV")=="production":
+    DEBUG = False
+    django_heroku.settings(locals())
+
  
