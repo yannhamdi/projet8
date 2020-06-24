@@ -1,1 +1,1 @@
- web: gunicorn projet8.wsgi
+ web: gunicorn p8.wsgi --log-file -
