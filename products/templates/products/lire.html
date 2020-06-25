@@ -36,15 +36,10 @@
 
 </section>
          {% endblock content %}
-
 {% block footer %}
-         <footer class="footer" style="bottom: 0; position: absolute; height: 1.5em; padding-left: 40%;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                ><div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div></div>
-            </div>
-        </div>
-    </div>
-</footer>
+  <footer class="bg-light py-5 flex-shrink-0">
+            <div class=" container nav-link"> <div class="mention" style="text-align: right; margin-top: 30px;">Copyright © 2020 - Yann Hamdi</div>
+            <p class="mention nav-link"><a href="{%url 'mention'%}">Mentions légales</a>
+        </footer>
+
 {% endblock footer %}
