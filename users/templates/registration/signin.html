@@ -42,3 +42,10 @@
         </header>
 
     {% endblock header %}
+
+      {% block footer %}
+        <footer class="bg-light flex-shrink-0" style="padding-bottom: 0px; padding-top: 0px;">
+            <div class=" container nav-link"> <div class="mention" style="text-align: right; margin-top: 30px;">Copyright © 2020 - Yann Hamdi</div>
+            <p class="mention nav-link"><a href="{%url 'mention'%}">Mentions légales</a>
+        </footer>
+        {% endblock footer %}

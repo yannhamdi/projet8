@@ -10004,6 +10004,10 @@ html {
   height: 100%;
 }
 
+body {
+  min-height: 100vh;
+}
+
 hr.divider {
   max-width: 3.25rem;
   border-width: 0.2rem;
@@ -10123,6 +10127,11 @@ header.masthead h1 {
   header.masthead h1 {
     font-size: 3.5rem;
   }
+}
+
+.footer {
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 
 #portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl {
