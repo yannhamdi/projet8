@@ -8,6 +8,8 @@
         <meta name="author" content="" />
         {% block title %} <title>Creative - Start Bootstrap Theme</title>{% endblock title %}
         <!-- Favicon-->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet" type="text/css">
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
@@ -19,6 +21,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'dist/css/styles.css'%} " rel="stylesheet" />
         <link rel="shortcut icon" type="image/ico" href="{% static 'img/logo_pur_beurre-favicon.ico' %}"/>
+
     </head>
     <body id="page-top d-flex flex-column justify-content-between">
         {% block nav %}
@@ -75,8 +78,13 @@
         <!-- Footer-->
         {% block footer %}
         <footer class="bg-light flex-shrink-0" style="padding-bottom: 0px; padding-top: 0px;">
-            <div class=" container nav-link"> <div class="mention" style="text-align: right; margin-top: 30px;">Copyright © 2020 - Yann Hamdi</div>
-            <p class="mention nav-link"><a href="{%url 'mention'%}">Mentions légales</a>
+            <div class=" container nav-link"> <div class="mention" style="text-align: right; margin-top: 30px;">
+                <div class="row justify-content-between">
+                     <div class="col-sm-3">
+            <p class="mention nav-link" style="padding-right: 0px"><a href="{%url 'mention'%}">Mentions légales</a></p> </div>
+                    <div class="col-sm-1">
+            <a href="mailto:hamdiyann@hotmail.com">Contact </a> </div>  </div>
+            </div> </div>
         </footer>
         {% endblock footer %}
         <!-- Bootstrap core JS-->
