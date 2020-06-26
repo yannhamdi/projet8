@@ -12,7 +12,7 @@ def get_json(category):
                "tag_contains_0": "contains",
                "tag_0": category,
                "json": 1,
-               "page_size": 1000,
+               "page_size": 500,
              }
     response = requests.get(url, params=params)
     products = []
