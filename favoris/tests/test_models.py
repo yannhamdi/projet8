@@ -46,7 +46,7 @@ class TestSelenium(LiveServerTestCase):
         super().tearDownClass()
 
     def test_login(self):
-        self.selenium.get(self.live_server_url)
+        self.selenium.get('%s%s' % (self.live_server_url, '/signin/'))
         username_input = self.selenium.find_element_by_name("username")
         username_input.send_keys('myuser')
         password_input = self.selenium.find_element_by_name("password")
