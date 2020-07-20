@@ -31,7 +31,9 @@ from django.urls import reverse
 from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.firefox.webdriver import WebDriver
-driver = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver')
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+binary = FirefoxBinary('/Documents/projet8/env/lib/python3.6/selenium/webdriver/firefox')
+driver = webdriver.Firefox(firefox_binary=binary,executable_path='/usr/local/bin/geckodriver')
 
 class TestSelenium(LiveServerTestCase):      
 
@@ -46,10 +48,9 @@ class TestSelenium(LiveServerTestCase):
         super().tearDownClass()
 
     def test_login(self):
-        self.selenium.get('%s%s' % (self.live_server_url, '/signin/'))
-        username_input = self.selenium.find_element_by_name("username")
+        driver.get("http://127.0.0.1:8000/users/signin/" )
+        username_input = driver.find_element_by_name("username")
         username_input.send_keys('myuser')
-        password_input = self.selenium.find_element_by_name("password")
+        password_input = driver.find_element_by_name("password")
         password_input.send_keys('secret')
-        self.selenium.find_element_by_xpath('//input[@value="Log in"]').click()
-        self.assertEqual(True, True)
+        driver.find_element_by_id("go").click()
