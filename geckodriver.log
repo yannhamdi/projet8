@@ -9992,3 +9992,109 @@ JavaScript error: , line 0: uncaught exception: null
 JavaScript error: , line 0: uncaught exception: null
 JavaScript error: , line 0: uncaught exception: null
 JavaScript error: , line 0: uncaught exception: null
+1595230909983	Marionette	INFO	Stopped listening on port 59897
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+1595230928578	Marionette	INFO	Stopped listening on port 55147
+console.error: services.settings: 
+  Message: NotFoundError: IndexedDB getLastModified() IDBDatabase.transaction: 'timestamps' is not a known object store name
+  Stack:
+    execute/<@resource://services-common/kinto-offline-client.js:343:20
+execute@resource://services-common/kinto-offline-client.js:338:14
+prepare@resource://services-common/kinto-offline-client.js:624:17
+
+console.error: services.settings: 
+  Message: NotFoundError: IndexedDB getLastModified() IDBDatabase.transaction: 'timestamps' is not a known object store name
+  Stack:
+    execute/<@resource://services-common/kinto-offline-client.js:343:20
+execute@resource://services-common/kinto-offline-client.js:338:14
+prepare@resource://services-common/kinto-offline-client.js:624:17
+
+console.warn: services.settings: main/normandy-recipes-capabilities sync already running
+console.warn: services.settings: main/cfr sync already running
+console.warn: services.settings: main/normandy-recipes-capabilities sync already running
+console.warn: services.settings: main/cfr sync already running
+console.warn: services.settings: main/normandy-recipes-capabilities sync already running
+console.warn: services.settings: blocklists/addons sync already running
+console.warn: services.settings: main/normandy-recipes-capabilities sync already running
+console.warn: services.settings: main/message-groups sync already running
+console.warn: services.settings: blocklists/addons sync already running
+console.warn: services.settings: blocklists/addons sync already running
+console.warn: services.settings: blocklists/addons sync already running
+console.warn: services.settings: blocklists/plugins sync already running
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+console.warn: services.settings: main/normandy-recipes-capabilities sync already running
+console.warn: services.settings: main/normandy-recipes-capabilities sync already running
+console.warn: services.settings: blocklists/addons sync already running
+1595230950004	Marionette	INFO	Stopped listening on port 55726
+console.warn: services.settings: blocklists/addons sync already running
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+1595230955308	Marionette	INFO	Stopped listening on port 55484
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+1595230960537	Marionette	INFO	Stopped listening on port 55796
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+1595230967078	Marionette	INFO	Stopped listening on port 56245
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+1595230973037	Marionette	INFO	Stopped listening on port 55078
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+1595230977570	Marionette	INFO	Stopped listening on port 55558
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+1595230983471	Marionette	INFO	Stopped listening on port 63156
+1595230989470	Marionette	INFO	Stopped listening on port 57991
+1595230996023	Marionette	INFO	Stopped listening on port 58750
+1595231001489	Marionette	INFO	Stopped listening on port 60085
+1595231006879	Marionette	INFO	Stopped listening on port 58922
+1595231012539	Marionette	INFO	Stopped listening on port 60473
+1595231016738	Marionette	INFO	Stopped listening on port 62353
+1595231021057	Marionette	INFO	Stopped listening on port 60296
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+1595231025698	Marionette	INFO	Stopped listening on port 63074
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+1595231030956	Marionette	INFO	Stopped listening on port 56186
+1595231035599	Marionette	INFO	Stopped listening on port 57907
+1595231049099	Marionette	INFO	Stopped listening on port 62532
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+1595231053575	Marionette	INFO	Stopped listening on port 55024
