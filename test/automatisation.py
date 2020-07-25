@@ -35,4 +35,7 @@ class TestSelenium(LiveServerTestCase):
         password_input.send_keys('secret')
         print("click")
         driver.find_element_by_id("go").click()
-        self.assertEqual(len(user), 1)
+        self.assertEqual(
+            signout.text,
+            "se deconnecter",
+        )
