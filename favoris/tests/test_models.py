@@ -26,31 +26,3 @@ class TestFavoriteModel(TestCase):
 
 
 
-from django.contrib.staticfiles.testing import StaticLiveServerTestCase
-from django.urls import reverse
-from django.test import LiveServerTestCase
-from selenium import webdriver
-from selenium.webdriver.firefox.webdriver import WebDriver
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
-binary = FirefoxBinary('/Documents/projet8/env/lib/python3.6/selenium/webdriver/firefox')
-driver = webdriver.Firefox(firefox_binary=binary,executable_path='/usr/local/bin/geckodriver')
-
-class TestSelenium(LiveServerTestCase):      
-
-    @classmethod
-    def setUpClass(cls):
-        super().setUpClass()
-        cls.selenium = WebDriver()
-        cls.selenium.implicitly_wait(10)
-
-    @classmethod
-    def tearDownClass(cls):
-        super().tearDownClass()
-
-    def test_login(self):
-        driver.get("http://127.0.0.1:8000/users/signin/" )
-        username_input = driver.find_element_by_name("username")
-        username_input.send_keys('myuser')
-        password_input = driver.find_element_by_name("password")
-        password_input.send_keys('secret')
-        driver.find_element_by_id("go").click()

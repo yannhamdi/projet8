@@ -10098,3 +10098,101 @@ JavaScript error: , line 0: uncaught exception: null
 JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
 JavaScript error: , line 0: uncaught exception: null
 1595231053575	Marionette	INFO	Stopped listening on port 55024
+1595354171177	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofile7SA9r4"
+1595354172046	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1595354172522	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1595354172522	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1595354172522	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1595354172522	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1595354175250	Marionette	INFO	Listening on port 52418
+1595354175275	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595354460374	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofile97DARg"
+1595354460936	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1595354461417	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1595354461418	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1595354461418	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1595354461418	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1595354463907	Marionette	INFO	Listening on port 52510
+1595354464006	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595354637799	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofileeHiyuf"
+1595354638379	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1595354638845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1595354638845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1595354638845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1595354638845	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1595354641416	Marionette	INFO	Listening on port 52604
+1595354641448	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595354743143	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofileHBRYM4"
+1595354743694	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1595354744163	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1595354744164	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1595354744164	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1595354744164	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1595354746708	Marionette	INFO	Listening on port 52696
+1595354746776	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595354912685	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofileOP5h3p"
+1595354913255	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1595354913703	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1595354913703	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1595354913703	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1595354913703	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1595354916106	Marionette	INFO	Listening on port 52788
+1595354916123	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595355208332	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofileSTqmgl"
+1595355208904	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1595355209364	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1595355209364	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1595355209364	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1595355209364	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1595355211941	Marionette	INFO	Listening on port 52917
+1595355211979	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595356069639	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofile124q3u"
+1595356070206	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1595356070654	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1595356070654	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1595356070655	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1595356070655	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1595356073296	Marionette	INFO	Listening on port 53019
+1595356073371	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595356420675	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofilehE1b3l"
+1595356421257	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1595356421731	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1595356421731	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1595356421731	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1595356421731	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1595356424112	Marionette	INFO	Listening on port 53106
+1595356424201	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595356575254	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofile3fTy4Y"
+1595356575876	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1595356576419	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1595356576419	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1595356576419	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1595356576419	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1595356578967	Marionette	INFO	Listening on port 53186
+1595356579018	Marionette	WARN	TLS certificate errors will be ignored for this session
+1595356621757	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofile5nG7jD"
+1595356622354	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1595356622865	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1595356622866	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1595356622866	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1595356622866	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1595356625364	Marionette	INFO	Listening on port 53264
+1595356625391	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://127.0.0.1:8000/static/dist/css/styles.css, line 1: SyntaxError: illegal character
+1595404806622	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595444412040	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595445316654	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595446213960	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595447114991	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595448915006	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595449818526	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595451618008	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595452519006	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595453422521	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595455222009	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595456123006	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595456125600	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595465583336	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595465584966	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595683000566	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595683073609	Sync.ErrorHandler	ERROR	Sync encountered a login error
