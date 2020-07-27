@@ -10196,3 +10196,15 @@ JavaScript error: http://127.0.0.1:8000/static/dist/css/styles.css, line 1: Synt
 1595465584966	Sync.ErrorHandler	ERROR	Sync encountered a login error
 1595683000566	Sync.ErrorHandler	ERROR	Sync encountered a login error
 1595683073609	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595690083748	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595769639641	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595822538646	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1595832713023	Sync.ErrorHandler	ERROR	Sync encountered a login error
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: AbortError: A request was aborted, for example through a call to IDBTransaction.abort.
+JavaScript error: , line 0: uncaught exception: null
+JavaScript error: , line 0: uncaught exception: null
+1595858636660	Sync.ErrorHandler	ERROR	Sync encountered a login error
