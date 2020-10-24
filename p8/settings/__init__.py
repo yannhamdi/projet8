@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-SECRET_KEY = os.environ.get('SECRET_KEY', 'l^)!j(k5j(3+g^s+e80w&6dsq&=*w=$aw1bd0)o2tnn77m%$p3')
+SECRET_KEY = 'l^)!j(k5j(3+g^s+e80w&6dsq&=*w=$aw1bd0)o2tnn77m%$p3'
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'l^)!j(k5j(3+g^s+e80w&6dsq&=*w=$aw1bd0
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['p8-yh.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['167.99.143.67']
 
 
 # Application definition
@@ -50,18 +50,12 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-if os.environ.get('ENV') == 'PRODUCTION':
-    # ...
-    # Simplified static file serving.
-    # https://warehouse.python.org/project/whitenoise/
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ROOT_URLCONF = 'p8.urls'
 
 TEMPLATES = [
@@ -98,14 +92,6 @@ DATABASES = {
     }
 }
 
-
-
-
-if os.environ.get('ENV') == 'PRODUCTION':
-        # ...
-        # Simplified static file serving.
-        # https://warehouse.python.org/project/whitenoise/
-        STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -163,24 +149,4 @@ FOOD_CATEGORIES =[
 AUTH_USER_MODEL = "users.User"
 
 LOGIN_URL = "/users/signin"
-LOGOUT_REDIRECT_URL = "/products/home"
-if os.environ.get('ENV') == 'PRODUCTION':
-    # ...
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
-if os.environ.get('ENV') == 'PRODUCTION':
-
-    # Static files settings
-    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-
-    # Extra places for collectstatic to find static files.
-    STATICFILES_DIRS = (
-        os.path.join(PROJECT_ROOT, 'static'),
-    )
-if os.environ.get("ENV")=="production":
-    DEBUG = False
-    django_heroku.settings(locals())
-
- 
+LOGOUT_REDIRECT_URL = "/products/home" 
