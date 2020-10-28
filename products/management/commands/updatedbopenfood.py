@@ -37,10 +37,10 @@ class Command(BaseCommand):
         for element in self.db_product:
             if self.checking_blank(element):
                 try:
-                    my_product = Products.objects.get(id_code=element["code"])
-                except Product.DoesNotExist:
+                    my_product = Products.objects.get(id_code=(element["code"]))
+                except Products.DoesNotExist:
                     continue
-                my_product.id_code = element.get("id_code")
+                my_product.id_code = element.get("code")
                 my_product.food_name = element.get("product_name")
                 my_product.nutrition_grade = element.get("nutrition_grade_fr")
                 my_product.food_link = element.get("url")
