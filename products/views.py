@@ -31,13 +31,16 @@ def lire(request, id):
 def search(request):
     form = ProductSearch(request.POST or None)
     if form.is_valid():
-        prod = form.cleaned_data['search']
-        search_sub = Products.objects.search_products(prod)
-        if search_sub:
-            return redirect(reverse('display',
+        try:
+            prod = form.cleaned_data['search']
+            search_sub = Products.objects.search_products(prod)
+            if search_sub:
+                return redirect(reverse('display',
                                     args=[int(search_sub['product_searched']),
                                           int(search_sub['substitue'])]))
-        return render(request, 'products/no_response.html', {'form': form})
+            return render(request, 'products/no_response.html', {'form': form})
+        except: 
+            return render(request, 'products/no_response.html', {'form': form})
     return render(request, 'products/search.html', locals())
 
 def mention(request):
