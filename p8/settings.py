@@ -9,9 +9,11 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-import django_heroku
 import os
-import dj_database_url
+
+import django_heroku
+
+
 # ...
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -20,16 +22,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-SECRET_KEY = os.environ.get('SECRET_KEY', 'l^)!j(k5j(3+g^s+e80w&6dsq&=*w=$aw1bd0)o2tnn77m%$p3')
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY', 'l^)!j(k5j(3+g^s+e80w&6dsq&=*w=$aw1bd0)o2tnn77m%$p3'
+)
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
-
 ALLOWED_HOSTS = ['p8-yh.herokuapp.com', '127.0.0.1']
+
+DEBUG = True if os.getenv("ENV") == "DEVELOPMENT" else False
 
 
 # Application definition
@@ -50,24 +54,21 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-if os.environ.get('ENV') == 'PRODUCTION':
-    # ...
-    # Simplified static file serving.
-    # https://warehouse.python.org/project/whitenoise/
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 ROOT_URLCONF = 'p8.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -94,18 +95,8 @@ DATABASES = {
         'PASSWORD': 'yh250980',
         'HOST': '127.0.0.1',
         'PORT': '5432',
-
     }
 }
-
-
-
-
-if os.environ.get('ENV') == 'PRODUCTION':
-        # ...
-        # Simplified static file serving.
-        # https://warehouse.python.org/project/whitenoise/
-        STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -129,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr'
 
 TIME_ZONE = 'UTC'
 
@@ -144,43 +135,24 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static")),
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_ROOT, 'staticfiles')
 
-FOOD_CATEGORIES =[
-  "fromages",
-  "charcuteries",
-  "snacks sucrés",
-  "soupes",
-  "jus de fruits",
-  "plats préparés",
-  "confitures",
-  "boissons",
-  "sauces"
-  ]
+FOOD_CATEGORIES = [
+    "fromages",
+    "charcuteries",
+    "snacks sucrés",
+    "soupes",
+    "jus de fruits",
+    "plats préparés",
+    "confitures",
+    "boissons",
+    "sauces",
+]
 AUTH_USER_MODEL = "users.User"
 
-LOGIN_URL = "/users/signin"
-LOGOUT_REDIRECT_URL = "/products/home"
+LOGIN_URL = "signin"
+LOGOUT_REDIRECT_URL = "home"
+
 if os.environ.get('ENV') == 'PRODUCTION':
-    # ...
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
-if os.environ.get('ENV') == 'PRODUCTION':
-
-    # Static files settings
-    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-
-    # Extra places for collectstatic to find static files.
-    STATICFILES_DIRS = (
-        os.path.join(PROJECT_ROOT, 'static'),
-    )
-if os.environ.get("ENV")=="production":
-    DEBUG = False
     django_heroku.settings(locals())
-
- 
