@@ -10,7 +10,9 @@ addons:
 before_script:
   - pip install -r requirements.txt
   - pip install --upgrade pip
-  
+  # ajouter tchappui-webdrivers dans requirements.txt
+  - install-webdrivers
+
 
 
 
