@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: don't run with debug turned on in production!
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['p8-yh.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['p8-yh.herokuapp.com', '127.0.0.1', 'p11-yh.herokuapp.com']
 
 DEBUG = True if os.getenv("ENV") == "DEVELOPMENT" else True
 
