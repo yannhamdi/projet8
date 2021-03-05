@@ -31,9 +31,13 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: don't run with debug turned on in production!
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['p8-yh.herokuapp.com', 'p11-yh.herokuapp.com','127.0.0.1']
+<<<<<<< HEAD
+ALLOWED_HOSTS = ['p8-yh.herokuapp.com', 'p11-yh.herokuapp.com/','127.0.0.1']
+=======
+ALLOWED_HOSTS = ['p8-yh.herokuapp.com', '127.0.0.1', 'p11-yh.herokuapp.com']
+>>>>>>> 085838426dc2d4be6b22bd58ea0f519abfe9775d
 
-DEBUG = True if os.getenv("ENV") == "DEVELOPMENT" else False
+DEBUG = True if os.getenv("ENV") == "DEVELOPMENT" else True
 
 
 # Application definition
@@ -93,7 +97,7 @@ DATABASES = {
         'NAME': 'nutella',
         'USER': 'yannhamdi',
         'PASSWORD': 'yh250980',
-        'HOST': '127.0.0.1',
+        'HOST': '',
         'PORT': '5432',
     }
 }
