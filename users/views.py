@@ -1,6 +1,6 @@
 from django.contrib.auth import login as auth_login
 from django.contrib import messages
-from django.contrib.auth import authenticate, logout
+from django.contrib.auth import authenticate, logout, update_session_auth_hash
 from django.core.exceptions import ValidationError
 from django.contrib import auth
 from django.shortcuts import render, redirect
