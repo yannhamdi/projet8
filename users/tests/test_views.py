@@ -81,7 +81,7 @@ class SuccessfulSignUpTests(TestCase):
         response = self.client.get(reverse('change_password'))
         self.assertEqual(response.status_code, 200)
 
-    def test_incorrect_password(self):
+    def test_correct_password(self):
         data = {
             'username': 'john',
             'last_name': 'hamdi',
@@ -95,7 +95,8 @@ class SuccessfulSignUpTests(TestCase):
         'new_password2': 'abc123',
         }
         form = PasswordChangeForm(data, data2)
+        self.response_3 = self.client.post(reverse('change_password'),data2)
         self.assertFalse(form.is_valid())
-        self.assertTrue(messages.success('Your password was successfully updated!'))
+        self.assertEqual(self.response_3.status_code, 200)
     
     
