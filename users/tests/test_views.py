@@ -74,4 +74,9 @@ class SuccessfulSignUpTests(TestCase):
     def test_account(self):
         response = self.client.get(reverse('account'))
         self.assertEqual(response.status_code, 200)
+
+    def test_change_password(self):
+        response = self.client.get(reverse('change_password'))
+        self.assertEqual(response.status_code, 200)
+    
     
