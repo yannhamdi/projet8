@@ -70,5 +70,4 @@ def change_password(request):
     return render(request, 'registration/change_password.html', {
         'form': form
     })
-def password_changed(request):
-    """views that confirms password changed"""
+

@@ -1,12 +1,14 @@
 from django.contrib.auth.models import User
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import authenticate
+from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib import auth
+from django.contrib import messages
 from django.urls import reverse
 from django.urls import resolve
 from django.test import TestCase, Client, RequestFactory
 from ..models import User
-from ..views import signup, signin, signout, account
+from ..views import signup, signin, signout, account, change_password
 from ..forms import SignUpForm, SignInForm
 
 
@@ -78,5 +80,22 @@ class SuccessfulSignUpTests(TestCase):
     def test_change_password(self):
         response = self.client.get(reverse('change_password'))
         self.assertEqual(response.status_code, 200)
+
+    def test_incorrect_password(self):
+        data = {
+            'username': 'john',
+            'last_name': 'hamdi',
+            'first_name': 'yann',
+            'email': 'ham@homtmail.com',
+            'password1': 'abcdef123456',
+            'password2': 'abcdef123456',
+           }         
+        data2 = {
+        'new_password1': 'abc123',
+        'new_password2': 'abc123',
+        }
+        form = PasswordChangeForm(data, data2)
+        self.assertFalse(form.is_valid())
+        self.assertTrue(messages.success('Your password was successfully updated!'))
     
     
