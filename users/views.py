@@ -1,4 +1,5 @@
 from django.contrib.auth import login as auth_login
+from django.contrib import messages
 from django.contrib.auth import authenticate, logout
 from django.core.exceptions import ValidationError
 from django.contrib import auth
@@ -60,9 +61,12 @@ def change_password(request):
         if form.is_valid():
             user = form.save()
             update_session_auth_hash(request, user)  # Important!
-            return redirect('password_changed')
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('change_password')
+        else:
+            messages.error(request, 'Please correct the error below.')
     else:
         form = PasswordChangeForm(request.user)
-    return render(request, 'registration/change_password.html', {
+    return render(request, 'accounts/change_password.html', {
         'form': form
     })
