@@ -97,6 +97,6 @@ class SuccessfulSignUpTests(TestCase):
         form = PasswordChangeForm(data, data2)
         self.response_3 = self.client.post(reverse('change_password'),data2)
         self.assertFalse(form.is_valid())
-        self.assertEqual(self.response_3.status_code, 200)
+        
     
     
