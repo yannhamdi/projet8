@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, logout
 from django.core.exceptions import ValidationError
 from django.contrib import auth
 from django.shortcuts import render, redirect
+from django.contrib.auth.forms import PasswordChangeForm
 
 from .forms import SignUpForm, SignInForm
 from users.models import User

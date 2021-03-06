@@ -29,3 +29,5 @@ class SignInForm(forms.Form):
             if self.user_cache is None:
                 raise forms.ValidationError('Identifiants incorrects')
         return self.cleaned_data
+
+    
