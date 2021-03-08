@@ -10,6 +10,5 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('favoris/', include('favoris.urls')),
     path('', home, name="home"),
-    path('users/', include('django.contrib.auth.urls')),
   
 ]
