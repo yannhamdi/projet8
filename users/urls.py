@@ -10,6 +10,6 @@ path('signin/', views.signin, name="signin"),
 path("signout/", views.signout, name="signout"),
 path("change_password/", views.change_password, name="change_password"),
 path('users/', include('django.contrib.auth.urls')),
-path('users/registration', password_reset , name = 'password_reset'),
+path('users/', password_reset.html , name = 'password_reset'),
 
 ]
