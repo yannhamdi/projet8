@@ -1,24 +1,30 @@
-from django.urls import reverse
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from django.contrib.auth import get_user_model
+from django.conf import settings
 from selenium import webdriver
 
-from users.models import User
 
 firefox_options = webdriver.FirefoxOptions()
 firefox_options.headless = True
 
 
-class TestSelenium(StaticLiveServerTestCase):
+class FirefoxFunctionalTestCases(StaticLiveServerTestCase):
+    """Functional tests using the Firefox web browser in headless mode."""
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.selenium = webdriver.Firefox(firefox_options=firefox_options)
-        cls.selenium.implicitly_wait(10)
+        cls.driver = webdriver.Firefox(
+            executable_path=r'(settings.BASE_DIR /webdrivers/geckodriver)',
+            options=firefox_options,
+        )
+        cls.driver.implicitly_wait(30)
+        cls.driver.maximize_window()
 
     @classmethod
     def tearDownClass(cls):
         super().tearDownClass()
-        cls.selenium.quit()
+        cls.driver.quit()
 
     def setUp(self):
         self.password = "affdLhj23HJ"
