@@ -95,8 +95,10 @@ class SuccessfulSignUpTests(TestCase):
         'new_password2': 'abc123',
         }
         form = PasswordChangeForm(data, data2)
-        self.response_3 = self.client.post(reverse('change_password'),data2)
+        self.response_3 = self.client.post(reverse('change_password'))
         self.assertFalse(form.is_valid())
-        
+        messages = list(self.response_3.context['messages'])
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(str(messages[0]), 'Please correct the error below.')
     
     
