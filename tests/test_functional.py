@@ -1,7 +1,7 @@
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.contrib.auth import get_user_model
 from django.conf import settings
-from selenium import webdriver
+from selenium.webdriver.firefox.webdriver import WebDriver
 
 
 firefox_options = webdriver.FirefoxOptions()
@@ -14,10 +14,8 @@ class FirefoxFunctionalTestCases(StaticLiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.driver = webdriver.Firefox(
-            executable_path=r'(settings.BASE_DIR /webdrivers/geckodriver)',
-            options=firefox_options,
-        )
+        cls.selenium = WebDriver()
+        
         cls.driver.implicitly_wait(30)
         cls.driver.maximize_window()
 
@@ -25,6 +23,7 @@ class FirefoxFunctionalTestCases(StaticLiveServerTestCase):
     def tearDownClass(cls):
         super().tearDownClass()
         cls.driver.quit()
+        super.tearDownClass()
 
     def setUp(self):
         self.password = "affdLhj23HJ"
@@ -35,6 +34,7 @@ class FirefoxFunctionalTestCases(StaticLiveServerTestCase):
         )
 
     def test_login(self):
+        
         self.selenium.get(self.live_server_url + reverse('signin'))
         username_input = self.selenium.find_element_by_name("username")
         username_input.send_keys(self.user.username)
