@@ -10229,3 +10229,29 @@ JavaScript error: , line 0: uncaught exception: null
 JavaScript error: http://localhost:63307/static/dist/css/styles.css, line 1: SyntaxError: illegal character
 JavaScript error: http://localhost:63307/static/dist/css/styles.css, line 1: SyntaxError: illegal character
 1605084948731	Marionette	INFO	Stopped listening on port 63316
+1615477707580	geckodriver	INFO	Listening on 127.0.0.1:58876
+1615477708597	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofile9Gcy4G"
+*** You are running in headless mode.
+1615477709016	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1615477709414	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1615477709415	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1615477709415	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1615477709415	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1615477711762	Marionette	INFO	Listening on port 58883
+1615477711779	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:58875/static/dist/css/styles.css, line 1: SyntaxError: illegal character
+JavaScript error: http://localhost:58875/static/dist/css/styles.css, line 1: SyntaxError: illegal character
+1615477718998	Marionette	INFO	Stopped listening on port 58883
+1615477724790	geckodriver	INFO	Listening on 127.0.0.1:58994
+1615477725801	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofile6zWwRe"
+*** You are running in headless mode.
+1615477726282	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1615477726768	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1615477726768	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1615477726768	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1615477726768	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1615477729231	Marionette	INFO	Listening on port 59001
+1615477729292	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:58993/static/dist/css/styles.css, line 1: SyntaxError: illegal character
+JavaScript error: http://localhost:58993/static/dist/css/styles.css, line 1: SyntaxError: illegal character
+1615477740104	Marionette	INFO	Stopped listening on port 59001
