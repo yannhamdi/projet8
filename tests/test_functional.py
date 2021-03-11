@@ -27,6 +27,7 @@ class CustomerTestCase(LiveServerTestCase):
     def setUp(self):
         User = get_user_model()
         self.password = "affdLhj23HJ"
+        self.email = "testuser@test.com"
         self.user = User.objects.create_user(
             username="testuser",
             email="testuser@test.com",
@@ -45,3 +46,14 @@ class CustomerTestCase(LiveServerTestCase):
             f"a[href=\"{reverse('signout')}\"]"
         )
         self.assertTrue(logout_button.is_displayed)
+
+    def test_reset_password(self):
+        """ test reset password"""
+        self.browser.get(self.live_server_url + reverse('password_reset'))
+        email_input = self.browser.find_element_by_name('email')
+        email_input.send_keys(self.email)
+        button = self.browser.find_element_by_id("button-send-reset")
+        button.click()
+        self.assertRedirects(response.status_code, 302)
+
+
