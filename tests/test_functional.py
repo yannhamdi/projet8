@@ -4,8 +4,11 @@ from selenium.webdriver import Firefox
 from selenium import webdriver
 from django.contrib.auth import get_user_model
 from django.conf import settings
-from users.models import User
+from django.urls import reverse
+
 browser= webdriver.Firefox(executable_path='/usr/local/bin/geckodriver')
+firefox_options = webdriver.FirefoxOptions()
+firefox_options.headless = True
 
 
 class CustomerTestCase(LiveServerTestCase):
@@ -13,7 +16,7 @@ class CustomerTestCase(LiveServerTestCase):
     def setUpClass(cls):
         super().setUpClass()
         cls.browser = Firefox()
-        cls.browser.implicitly_wait(30)
+        cls.browser.implicitly_wait(50)
     
     @classmethod
     def tearDownClass(cls):
@@ -22,6 +25,7 @@ class CustomerTestCase(LiveServerTestCase):
 
 
     def setUp(self):
+        User = get_user_model()
         self.password = "affdLhj23HJ"
         self.user = User.objects.create_user(
             username="testuser",
@@ -30,8 +34,7 @@ class CustomerTestCase(LiveServerTestCase):
         )
 
     def test_login(self):
-       
-        
+        self.browser.get(self.live_server_url + reverse('signin'))
         username_input = self.browser.find_element_by_name("username")
         username_input.send_keys(self.user.username)
         password_input = self.browser.find_element_by_name("password")
