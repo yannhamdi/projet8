@@ -5,6 +5,7 @@ from selenium import webdriver
 from django.contrib.auth import get_user_model
 from django.conf import settings
 from django.urls import reverse
+from django.core import mail
 
 browser= webdriver.Firefox(executable_path='/usr/local/bin/geckodriver')
 firefox_options = webdriver.FirefoxOptions()
@@ -54,6 +55,7 @@ class CustomerTestCase(LiveServerTestCase):
         email_input.send_keys(self.email)
         button = self.browser.find_element_by_id("button-send-reset")
         button.click()
-        self.assertRedirects(response.status_code, 302)
+        self.assertEqual(len(mail.outbox), 1)
+        self.assertIn("Réinitialisation du mot de passe", mail.outbox[0].subject)
 
 
