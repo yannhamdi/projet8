@@ -10,7 +10,7 @@ addons:
 before_script:
   - pip install -r requirements.txt
   - pip install --upgrade pip
-  - install geckodriver
+  
 
 
 
