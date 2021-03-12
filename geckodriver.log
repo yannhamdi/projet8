@@ -1108,3 +1108,14 @@ JavaScript error: http://localhost:49644/static/dist/css/styles.css, line 1: Syn
 JavaScript error: http://localhost:49644/static/dist/css/styles.css, line 1: SyntaxError: illegal character
 JavaScript error: http://localhost:49644/static/dist/css/styles.css, line 1: SyntaxError: illegal character
 1615499676717	Marionette	INFO	Stopped listening on port 49656
+[GFX1-]: [OPENGL] Failed to init compositor with reason: FEATURE_FAILURE_OPENGL_CREATE_CONTEXT
+2021-03-12 13:15:51.985 firefox-bin[43535:1518982] Warning: Expected min height of view: (<NSButton: 0x121019400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-12 13:15:51.986 firefox-bin[43535:1518982] Warning: Expected min height of view: (<NSButton: 0x121b8e800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-12 13:15:51.987 firefox-bin[43535:1518982] Warning: Expected min height of view: (<NSButton: 0x121b8ec00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-12 13:15:51.987 firefox-bin[43535:1518982] Warning: Expected min height of view: (<NSButton: 0x121c97c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-12 13:15:51.988 firefox-bin[43535:1518982] Warning: Expected min height of view: (<NSButton: 0x121ca0400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-12 13:15:51.989 firefox-bin[43535:1518982] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12be3a400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-12 13:15:51.989 firefox-bin[43535:1518982] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1344eec00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+1615554957991	Marionette	INFO	Stopped listening on port 65427
+1615554960338	Marionette	INFO	Stopped listening on port 49374
+1615554963031	Marionette	INFO	Stopped listening on port 49577
