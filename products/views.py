@@ -18,7 +18,7 @@ def display(request, id_searched, id_substitue):
     product_sub = Products.objects.get(id_code=id_substitue)
     return render(request, 'products/display.html',
                   {'product_searched': product_searched,
-                   'product_sub': , 'form': form})
+                   'product_sub': product_sub, 'form': form})
 
 
 def lire(request, id):
