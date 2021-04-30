@@ -1,0 +1,26 @@
+dist: bionic
+language: python
+
+python:
+  - '3.8'
+addons:
+  chrome: stable
+  firefox: latest
+
+before_script:
+  - pip install -r requirements.txt
+  - pip install --upgrade pip
+  
+
+
+
+
+env:
+  global:
+    - DJANGO_SETTINGS_MODULE="p8.settings.travis"
+
+services:
+  - postgresql
+
+script:
+  - python manage.py test
