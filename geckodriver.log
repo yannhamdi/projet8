@@ -1269,3 +1269,21 @@ JavaScript error: http://localhost:59965/static/dist/css/styles.css, line 1: Syn
 JavaScript error: http://localhost:59965/static/dist/css/styles.css, line 1: SyntaxError: illegal character
 JavaScript error: http://localhost:59965/static/dist/css/styles.css, line 1: SyntaxError: illegal character
 1615745227785	Marionette	INFO	Stopped listening on port 59974
+[GFX1-]: [OPENGL] Failed to init compositor with reason: FEATURE_FAILURE_OPENGL_CREATE_CONTEXT
+2021-03-17 10:31:10.487 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSButton: 0x13b4f2400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 10:31:10.488 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSButton: 0x16600d000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 10:31:10.489 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSButton: 0x16600f800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 10:31:10.489 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSButton: 0x166010400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 10:31:10.490 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSButton: 0x166010800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 10:31:10.491 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x166011000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 10:31:10.492 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x16604dc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+[GFX1-]: [OPENGL] Failed to init compositor with reason: FEATURE_FAILURE_OPENGL_CREATE_CONTEXT
+2021-03-17 21:31:44.739 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSButton: 0x137894400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 21:31:44.740 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSButton: 0x13a69ec00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 21:31:44.740 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSButton: 0x13aa84c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 21:31:44.741 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSButton: 0x13aa86400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 21:31:44.742 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSButton: 0x13aa86c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 21:31:44.742 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13aa8cc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-03-17 21:31:44.743 firefox-bin[95350:3562192] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13abec800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+CoreSVG has logged an error. Set environment variabe "CORESVG_VERBOSE" to learn more.
+1616016707951	Marionette	INFO	Stopped listening on port 59896
