@@ -10418,3 +10418,5 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 JavaScript error: http://localhost:54920/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
 JavaScript error: http://localhost:54920/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
 1619816016216	Marionette	INFO	Stopped listening on port 54931
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
