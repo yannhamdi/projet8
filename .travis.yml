@@ -6,9 +6,6 @@ python:
 addons:
   chrome: stable
   firefox: latest
-  apt:
-    packages:
-      firefox-geckodriver
 
 before_script:
   - pip install -r requirements.txt
