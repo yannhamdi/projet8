@@ -10508,3 +10508,13 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 JavaScript error: http://localhost:58699/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
 JavaScript error: http://localhost:58699/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
 1619820814517	Marionette	INFO	Stopped listening on port 58708
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1619838366084	Marionette	INFO	Stopped listening on port 58501
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619838366431	Marionette	INFO	Stopped listening on port 58075
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
