@@ -15,9 +15,10 @@ before_script:
 
 env:
  global:
-   - DJANGO_SETTINGS_MODULE="p8.settings"
+   - DJANGO_SETTINGS_MODULE="p8.settings.travis"
 
-
+services:
+ - postgresql
 
 script:
  - python manage.py test 
