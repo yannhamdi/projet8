@@ -6,7 +6,7 @@ from django.contrib.auth import get_user_model
 from django.conf import settings
 from django.urls import reverse
 
-browser= webdriver.Firefox(executable_path='webdrivers/geckodriver')
+browser= webdriver.Firefox(executable_path='/usr/local/bin/geckodriver')
 firefox_options = webdriver.FirefoxOptions()
 firefox_options.headless = True
 

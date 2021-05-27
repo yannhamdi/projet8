@@ -10785,3 +10785,53 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 JavaScript error: http://localhost:62027/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
 JavaScript error: http://localhost:62027/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
 1622139830788	Marionette	INFO	Stopped listening on port 62035
+1622140131750	geckodriver	INFO	Listening on 127.0.0.1:62206
+1622140132771	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofilebGWMeI"
+*** You are running in headless mode.
+1622140133307	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622140135388	Marionette	INFO	Listening on port 62213
+1622140135447	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:62205/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+JavaScript error: http://localhost:62205/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+1622140138228	Marionette	INFO	Stopped listening on port 62213
+1622140242919	geckodriver	INFO	Listening on 127.0.0.1:62310
+1622140243938	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofilewf13Bx"
+1622140244473	Marionette	INFO	Marionette enabled
+2021-05-27 18:30:45.735 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSButton: 0x12a8b9000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:45.736 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSButton: 0x137ef3c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:45.737 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSButton: 0x137ef0400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:45.738 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSButton: 0x12a9ef800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:45.739 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSButton: 0x137ef2800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:45.740 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x137ef4800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:45.740 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x137efd000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622140246953	Marionette	INFO	Listening on port 62317
+1622140247027	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622140249749	geckodriver	INFO	Listening on 127.0.0.1:62377
+1622140250763	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofileyCDAKA"
+1622140251328	Marionette	INFO	Marionette enabled
+2021-05-27 18:30:52.787 firefox-bin[15842:584372] Warning: Expected min height of view: (<NSButton: 0x12ffe4000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:52.787 firefox-bin[15842:584372] Warning: Expected min height of view: (<NSButton: 0x13d5e4400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:52.788 firefox-bin[15842:584372] Warning: Expected min height of view: (<NSButton: 0x13d019c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:52.788 firefox-bin[15842:584372] Warning: Expected min height of view: (<NSButton: 0x13d5e1800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:52.789 firefox-bin[15842:584372] Warning: Expected min height of view: (<NSButton: 0x13d5dfc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:52.790 firefox-bin[15842:584372] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13d5e1c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-27 18:30:52.790 firefox-bin[15842:584372] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13d7a1c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622140254227	Marionette	INFO	Listening on port 62385
+1622140254259	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622140256543	Marionette	INFO	Stopped listening on port 62385
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622140257269	geckodriver	INFO	Listening on 127.0.0.1:62471
+1622140258281	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofile1GS9dJ"
+*** You are running in headless mode.
+1622140258767	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622140260875	Marionette	INFO	Listening on port 62478
+1622140260945	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:62470/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+JavaScript error: http://localhost:62470/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+1622140263572	Marionette	INFO	Stopped listening on port 62478
