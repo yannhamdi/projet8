@@ -11,7 +11,7 @@ install:
  - pip install -r requirements.txt
 
 before_script:
- - install-webdrivers --./webdrivers/geckodriver
+ - install-webdrivers --path webdrivers
 
 env:
  global:
