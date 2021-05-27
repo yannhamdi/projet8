@@ -17,8 +17,7 @@ env:
  global:
    - DJANGO_SETTINGS_MODULE="p8.settings"
 
-services:
- - postgresql
+
 
 script:
  - python manage.py test 
