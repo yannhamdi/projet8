@@ -2,25 +2,23 @@ dist: bionic
 language: python
 
 python:
-  - '3.8'
+ - '3.8'
+
 addons:
-  chrome: stable
-  firefox: latest
+ firefox: latest
+
+install:
+ - pip install -r requirements.txt
 
 before_script:
-  - pip install -r requirements.txt
-  - pip install --upgrade pip
-  
-
-
-
+ - install-webdrivers --path webdrivers
 
 env:
-  global:
-    - DJANGO_SETTINGS_MODULE="p8.settings.travis"
+ global:
+   - DJANGO_SETTINGS_MODULE="p8.settings"
 
 services:
-  - postgresql
+ - postgresql
 
 script:
-  - python manage.py test
+ - python manage.py test -v
