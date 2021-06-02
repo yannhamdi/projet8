@@ -10835,3 +10835,70 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 JavaScript error: http://localhost:62470/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
 JavaScript error: http://localhost:62470/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
 1622140263572	Marionette	INFO	Stopped listening on port 62478
+2021-05-29 07:56:59.236 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSButton: 0x137be9000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:56:59.239 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSButton: 0x1444af400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:56:59.239 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSButton: 0x1444afc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:56:59.240 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSButton: 0x1444b5c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:56:59.241 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSButton: 0x1444b6c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:56:59.242 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1444b5800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:56:59.242 firefox-bin[15827:583966] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1444ba000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+CoreSVG has logged an error. Set environment variabe "CORESVG_VERBOSE" to learn more.
+1622275022619	Marionette	INFO	Stopped listening on port 62317
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+CoreSVG has logged an error. Set environment variabe "CORESVG_VERBOSE" to learn more.
+1622275030599	Marionette	INFO	Stopped listening on port 61078
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+2021-05-29 07:57:30.499 firefox-bin[15459:569609] Warning: Expected min height of view: (<NSButton: 0x130bed000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:30.500 firefox-bin[15459:569609] Warning: Expected min height of view: (<NSButton: 0x130bf0000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:30.501 firefox-bin[15459:569609] Warning: Expected min height of view: (<NSButton: 0x130bf0400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:30.501 firefox-bin[15459:569609] Warning: Expected min height of view: (<NSButton: 0x130bf0800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:30.502 firefox-bin[15459:569609] Warning: Expected min height of view: (<NSButton: 0x130bf1400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:30.505 firefox-bin[15459:569609] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x130bf1800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:30.506 firefox-bin[15459:569609] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x130cce000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+CoreSVG has logged an error. Set environment variabe "CORESVG_VERBOSE" to learn more.
+1622275053821	Marionette	INFO	Stopped listening on port 61319
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+2021-05-29 07:57:36.152 firefox-bin[15569:573972] Warning: Expected min height of view: (<NSButton: 0x12b589400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:36.153 firefox-bin[15569:573972] Warning: Expected min height of view: (<NSButton: 0x12cf10800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:36.154 firefox-bin[15569:573972] Warning: Expected min height of view: (<NSButton: 0x12cf11800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:36.155 firefox-bin[15569:573972] Warning: Expected min height of view: (<NSButton: 0x12cf12c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:36.155 firefox-bin[15569:573972] Warning: Expected min height of view: (<NSButton: 0x1455dd000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:36.156 firefox-bin[15569:573972] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1455d8000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 07:57:36.157 firefox-bin[15569:573972] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x145649c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+CoreSVG has logged an error. Set environment variabe "CORESVG_VERBOSE" to learn more.
+1622275059446	Marionette	INFO	Stopped listening on port 61588
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+CoreSVG has logged an error. Set environment variabe "CORESVG_VERBOSE" to learn more.
+1622275063445	Marionette	INFO	Stopped listening on port 59560
+2021-05-29 09:04:09.682 firefox-bin[13603:500453] Warning: Expected min height of view: (<NSButton: 0x1259e9800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:09.682 firefox-bin[13603:500453] Warning: Expected min height of view: (<NSButton: 0x13d216c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:09.683 firefox-bin[13603:500453] Warning: Expected min height of view: (<NSButton: 0x13d218000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:09.684 firefox-bin[13603:500453] Warning: Expected min height of view: (<NSButton: 0x13d215800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:09.684 firefox-bin[13603:500453] Warning: Expected min height of view: (<NSButton: 0x14a61f800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:09.685 firefox-bin[13603:500453] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x14a076c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:09.686 firefox-bin[13603:500453] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x14a075800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+CoreSVG has logged an error. Set environment variabe "CORESVG_VERBOSE" to learn more.
+1622279052747	Marionette	INFO	Stopped listening on port 59112
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+2021-05-29 09:04:14.827 firefox-bin[15652:576921] Warning: Expected min height of view: (<NSButton: 0x12536c400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:14.828 firefox-bin[15652:576921] Warning: Expected min height of view: (<NSButton: 0x126e0e800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:14.829 firefox-bin[15652:576921] Warning: Expected min height of view: (<NSButton: 0x126e0ec00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:14.830 firefox-bin[15652:576921] Warning: Expected min height of view: (<NSButton: 0x126eb6400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:14.831 firefox-bin[15652:576921] Warning: Expected min height of view: (<NSButton: 0x16b040000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:14.831 firefox-bin[15652:576921] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x16b040400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-29 09:04:14.832 firefox-bin[15652:576921] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x16b046000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+CoreSVG has logged an error. Set environment variabe "CORESVG_VERBOSE" to learn more.
+1622279057760	Marionette	INFO	Stopped listening on port 61868
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
